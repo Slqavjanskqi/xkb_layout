@@ -256,7 +256,7 @@ xkb_symbols "sla_GlagUcouke" {
 partial alphanumeric_keys
 xkb_symbols "sla_LatnE1" {
   include "de(e1)"
-	///////////////////////// Medzhueslqavyanskqie (Latinica E1) /////////////////////////
+	///////////////////////// Medzhueslqawyanskqie (Latinica E1) /////////////////////////
 	name[Group1]= "(Latinica E1)";
 	// EUROPEAN LAYOUT LATIN
 
