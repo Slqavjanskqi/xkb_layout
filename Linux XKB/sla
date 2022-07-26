@@ -1,0 +1,419 @@
+// LINUX XKB LAYOUT FILE
+// SLQAVJANSKQIJ (MODERN SLAVIC LAYOUTs)
+// 2018-07-14 © Кърчьаковъ, Ръаманъ П.
+// Currect Version: 3.5
+
+
+// SLA_BASE
+// ┌─────────┬─────────┬─────────┬─────────┬─────────┬─────────┬─────────┬─────────┬─────────┬─────────┬─────────┬─────────┬─────────┲━━━━━━━━━━━┓
+// │ ° ̂ _  ҃ │ !   ◊   │ "   ¦ ꙰  │ §   ¶ ꙲  │ $  ℳ ₴ │ % € ₰   │ &   ⁊   │ / ÷ №   │ ( ∞ ⟪   │ )   ⟫   │ =   ∅   │ ?    ¬  │ ̀ ̧ ͜  ̏ ┃ ⌫         ┃
+// │ ^ × ̈ ҂ │ 1 ’ ¼ ҈ │ 2 ² ½ ҉ │ 3 ³ ¾ ꙱  │ 4 — ¤ ₽ │ 5 ¡ ‰ ¥ │ 6 ¿ ⁄    │ 7 { ⌀   │ 8 [ ⟨   │ 9 ] ⟩   │ 0 } ÷   │--- \ ≠  │ ́ ̇ £ ̋ ┃ Backspace ┃
+// ┢━━━━━━━━━┷━┱───────┴─┬───────┴─┬───────┴─┬───────┴─┬───────┴─┬───────┴─┬───────┴─┬───────┴─┬───────┴─┬───────┴─┬───────┴─┬───────┺━┯━━━━━━━━━┩
+// ┃           ┃ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ * ̃  ⁒  │ '   ‡   │
+// ┃ Tab ↹     ┃ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ + ~ ±   │ # − †   │
+// ┣━━━━━━━━━━━┻┱────────┴┬────────┴┬────────┴┬────────┴┬────────┴┬────────┴┬────────┴┬────────┴┬────────┴┬────────┴┬────────┴┲━━━━━━━━┷━━━━━━━━━┪
+// ┃ Caps       ┃ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 ┃ Enter            ┃
+// ┃ Lock ⇬     ┃ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 ┃ ⏎                ┃
+// ┣━━━━━━━━━┳━━┻──────┬──┴──────┬──┴──────┬──┴──────┬──┴──────┬──┴──────┬──┴──────┬──┴──────┬──┴──────┬──┴──────┬──┴──────┲━━┻━━━━━━━━━━━━━━━━━━┫
+// ┃   ⇧     ┃ >   ≥ « │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ ;   ♡   │ : ̇ ✓   │ _ – ◦   ┃                     ┃
+// ┃ Shift   ┃ < | ≤ » │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ , ‑ ʻ   │ . · … ꙳ │ -  ­ •   ┃     Shift ⇧         ┃
+// ┣━━━━━━━━━┻━┳━━━━━━━┷━━┳━━━━━━┷━━━━┱────┴─────────┴─────────┴─────────┴─────────┴─────────┴──┲━━━━━━┷━━━┳━━━━━┷━━━━━┳━━━┻━━━━━━┳━━━━━━━━━━━━━━┫
+// ┃           ┃          ┃           ┃                                                         ┃          ┃           ┃          ┃              ┃
+// ┃ Ctrl      ┃ Super    ┃  Alt      ┃                Space                                    ┃ AltGr ⇮  ┃ FN        ┃ Menu     ┃ Ctrl         ┃
+// ┗━━━━━━━━━━━┻━━━━━━━━━━┻━━━━━━━━━━━┹─────────────────────────────────────────────────────────┺━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━┻━━━━━━━━━━━━━━┛
+
+partial alphanumeric_keys
+xkb_symbols "sla_base" {
+	// E1-EUROPEAN LAYOUT BASE
+
+	// FIRST ROW
+    key.type[Group1] = "EIGHT_LEVEL";
+    key <TLDE> { [ dead_circumflex,     degree,             multiply,    U0302,                U0308,             NoSymbol,    U0482,    U0483 ] };
+    key <AE01> { [               1,     exclam, rightsinglequotemark, NoSymbol,           onequarter,                U25CA,    U0488, NoSymbol ] };
+    key <AE02> { [               2,   quotedbl,          twosuperior, NoSymbol,              onehalf,                U00A6,    U0489,    UA670 ] };
+    key <AE03> { [               3,    section,        threesuperior, NoSymbol,        threequarters,                U00B6,    UA671,    UA672 ] };
+    key <AE04> { [               4,     dollar,               emdash, NoSymbol,             currency,                U2133,    U20BD,    U20B4 ] };
+    key <AE05> { [               5,    percent,           exclamdown, EuroSign,                U2030,                U20B0,    U00A5, NoSymbol ] };
+    key <AE06> { [               6,  ampersand,         questiondown, NoSymbol,                U2044,                U204A, NoSymbol, NoSymbol ] };
+    key <AE07> { [               7,      slash,            braceleft,    U00F7,                U2300,                U2116, NoSymbol, NoSymbol ] };
+    key <AE08> { [               8,  parenleft,          bracketleft,    U221E,                U27E8,                U27EA, NoSymbol, NoSymbol ] };
+    key <AE09> { [               9, parenright,         bracketright, NoSymbol,                U27E9,                U27EB, NoSymbol, NoSymbol ] };
+    key <AE10> { [               0,      equal,           braceright, NoSymbol,             division,                U2205, NoSymbol, NoSymbol ] };
+    key <AE11> { [ISO_Level5_Latch,   question,            backslash, NoSymbol,             notequal,                U00AC, NoSymbol, NoSymbol ] };
+    key <AE12> { [           U0301,      U0300,                U0307,    U0327,             sterling,                U035C,    U030B,    U030F ] };
+
+	// SECOND ROW
+    key.type[Group1] = "EIGHT_LEVEL_ALPHABETIC";
+    key <AD01> { [        NoSymbol,   NoSymbol,             NoSymbol, NoSymbol,             NoSymbol,             NoSymbol, NoSymbol, NoSymbol ] };
+    key <AD02> { [        NoSymbol,   NoSymbol,             NoSymbol, NoSymbol,             NoSymbol,             NoSymbol, NoSymbol, NoSymbol ] };
+    key <AD03> { [        NoSymbol,   NoSymbol,             NoSymbol, NoSymbol,             NoSymbol,             NoSymbol, NoSymbol, NoSymbol ] };
+    key <AD04> { [        NoSymbol,   NoSymbol,             NoSymbol, NoSymbol,             NoSymbol,             NoSymbol, NoSymbol, NoSymbol ] };
+    key <AD05> { [        NoSymbol,   NoSymbol,             NoSymbol, NoSymbol,             NoSymbol,             NoSymbol, NoSymbol, NoSymbol ] };
+    key <AD06> { [        NoSymbol,   NoSymbol,             NoSymbol, NoSymbol,             NoSymbol,             NoSymbol, NoSymbol, NoSymbol ] };
+    key <AD07> { [        NoSymbol,   NoSymbol,             NoSymbol, NoSymbol,             NoSymbol,             NoSymbol, NoSymbol, NoSymbol ] };
+    key <AD08> { [        NoSymbol,   NoSymbol,             NoSymbol, NoSymbol,             NoSymbol,             NoSymbol, NoSymbol, NoSymbol ] };
+    key <AD09> { [        NoSymbol,   NoSymbol,             NoSymbol, NoSymbol,             NoSymbol,             NoSymbol, NoSymbol, NoSymbol ] };
+    key <AD10> { [        NoSymbol,   NoSymbol,             NoSymbol, NoSymbol,             NoSymbol,             NoSymbol, NoSymbol, NoSymbol ] };
+    key <AD11> { [        NoSymbol,   NoSymbol,             NoSymbol, NoSymbol,             NoSymbol,             NoSymbol, NoSymbol, NoSymbol ] };
+    key.type[Group1] = "EIGHT_LEVEL";
+    key <AD12> { [            plus,   asterisk,           asciitilde,    U0303,            plusminus,                U2052, NoSymbol, NoSymbol ] };
+
+    // THIRD ROW
+    key.type[Group1] = "EIGHT_LEVEL_ALPHABETIC";
+    key <AC01> { [        NoSymbol,   NoSymbol,             NoSymbol, NoSymbol,             NoSymbol,             NoSymbol, NoSymbol, NoSymbol ] };
+    key <AC02> { [        NoSymbol,   NoSymbol,             NoSymbol, NoSymbol,             NoSymbol,             NoSymbol, NoSymbol, NoSymbol ] };
+    key <AC03> { [        NoSymbol,   NoSymbol,             NoSymbol, NoSymbol,             NoSymbol,             NoSymbol, NoSymbol, NoSymbol ] };
+    key <AC04> { [        NoSymbol,   NoSymbol,             NoSymbol, NoSymbol,             NoSymbol,             NoSymbol, NoSymbol, NoSymbol ] };
+    key <AC05> { [        NoSymbol,   NoSymbol,             NoSymbol, NoSymbol,             NoSymbol,             NoSymbol, NoSymbol, NoSymbol ] };
+    key <AC06> { [        NoSymbol,   NoSymbol,             NoSymbol, NoSymbol,             NoSymbol,             NoSymbol, NoSymbol, NoSymbol ] };
+    key <AC07> { [        NoSymbol,   NoSymbol,             NoSymbol, NoSymbol,             NoSymbol,             NoSymbol, NoSymbol, NoSymbol ] };
+    key <AC08> { [        NoSymbol,   NoSymbol,             NoSymbol, NoSymbol,             NoSymbol,             NoSymbol, NoSymbol, NoSymbol ] };
+    key <AC09> { [        NoSymbol,   NoSymbol,             NoSymbol, NoSymbol,             NoSymbol,             NoSymbol, NoSymbol, NoSymbol ] };
+    key <AC10> { [        NoSymbol,   NoSymbol,             NoSymbol, NoSymbol,             NoSymbol,             NoSymbol, NoSymbol, NoSymbol ] };
+    key <AC11> { [        NoSymbol,   NoSymbol,             NoSymbol, NoSymbol,             NoSymbol,             NoSymbol, NoSymbol, NoSymbol ] };
+    key.type[Group1] = "EIGHT_LEVEL";
+    key <BKSL> { [      numbersign, apostrophe,                U2212, NoSymbol,                U2020,                U2021, NoSymbol, NoSymbol ] };
+
+    // FOURTH ROW
+    key.type[Group1] = "EIGHT_LEVEL_ALPHABETIC";
+    key <AB01> { [        NoSymbol,   NoSymbol,             NoSymbol, NoSymbol,             NoSymbol,             NoSymbol, NoSymbol, NoSymbol ] };
+    key <AB02> { [        NoSymbol,   NoSymbol,             NoSymbol, NoSymbol,             NoSymbol,             NoSymbol, NoSymbol, NoSymbol ] };
+    key <AB03> { [        NoSymbol,   NoSymbol,             NoSymbol, NoSymbol,             NoSymbol,             NoSymbol, NoSymbol, NoSymbol ] };
+    key <AB04> { [        NoSymbol,   NoSymbol,             NoSymbol, NoSymbol,             NoSymbol,             NoSymbol, NoSymbol, NoSymbol ] };
+    key <AB05> { [        NoSymbol,   NoSymbol,             NoSymbol, NoSymbol,             NoSymbol,             NoSymbol, NoSymbol, NoSymbol ] };
+    key <AB06> { [        NoSymbol,   NoSymbol,             NoSymbol, NoSymbol,             NoSymbol,             NoSymbol, NoSymbol, NoSymbol ] };
+    key <AB07> { [        NoSymbol,   NoSymbol,             NoSymbol, NoSymbol,             NoSymbol,             NoSymbol, NoSymbol, NoSymbol ] };
+    key.type[Group1] = "EIGHT_LEVEL";
+    key <AB08> { [           comma,  semicolon,                U2011, NoSymbol,                U02BB,                U2661, NoSymbol, NoSymbol ] };
+    key <AB09> { [          period,      colon,       periodcentered,    U0307,             ellipsis,                U2713,    UA673, NoSymbol ] };
+    key <AB10> { [           minus, underscore,               hyphen,   endash,                U2022,                U25E6, NoSymbol, NoSymbol ] };
+
+    // FIFTH ROW
+    key.type[Group1] = "EIGHT_LEVEL";
+    key <SPCE> { [           space,      space,         nobreakspace, NoSymbol,                U200A,                U2009, NoSymbol, NoSymbol ] };
+
+    key.type[Group1] = "ONE_LEVEL";
+    key <RTSH> { [ Shift_R ] };
+    key <RALT> { [ ISO_Level3_Shift ] };
+
+    // KEY <LSGT> OF THE 105-KEYS KEYBOARD
+    key.type[Group1] = "EIGHT_LEVEL";
+    key <LSGT> { [            less,    greater,                  bar, NoSymbol,        lessthanequal,     greaterthanequal,    U00BB,    U00AB ] };
+
+    include "kpdl(comma)"
+};
+
+
+// sla_CyrsUcouke TODO
+// ┌─────────┬─────────┬─────────┬─────────┬─────────┬─────────┬─────────┬─────────┬─────────┬─────────┬─────────┬─────────┬─────────┲━━━━━━━━━━━┓
+// │ ° ̂ ̊  ҃ │ !   ◊   │ "   ¦   │ §   ¶   │ $  ℳ ₴ │ % € ₰   │ &   ⁊   │ / ÷ №   │ ( ∞ ⟪   │ )   ⟫   │ =   ∅   │ ?    ¬  │ ̀ ̧ ͜  ̏ ┃ ⌫         ┃
+// │ ^ × ̈ ҂ │ 1 ’ ¼   │ 2 ² ½   │ 3 ³ ¾   │ 4 — ¤ ₽ │ 5 ¡ ‰ ¥ │ 6 ¿ ⁄    │ 7 { ⌀   │ 8 [ ⟨   │ 9 ] ⟩   │ 0 } ÷   │--- \ ≠  │ ́ ̇ £ ̋ ┃ Backspace ┃
+// ┢━━━━━━━━━┷━┱───────┴─┬───────┴─┬───────┴─┬───────┴─┬───────┴─┬───────┴─┬───────┴─┬───────┴─┬───────┴─┬───────┴─┬───────┴─┬───────┺━┯━━━━━━━━━┩
+// ┃           ┃ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ * ̃  ⁒  │ '   ‡   │
+// ┃ Tab ↹     ┃ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ + ~ ±   │ # − †   │
+// ┣━━━━━━━━━━━┻┱────────┴┬────────┴┬────────┴┬────────┴┬────────┴┬────────┴┬────────┴┬────────┴┬────────┴┬────────┴┬────────┴┲━━━━━━━━┷━━━━━━━━━┪
+// ┃ Caps       ┃ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 ┃ Enter            ┃
+// ┃ Lock ⇬     ┃ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 ┃ ⏎                ┃
+// ┣━━━━━━━━━┳━━┻──────┬──┴──────┬──┴──────┬──┴──────┬──┴──────┬──┴──────┬──┴──────┬──┴──────┬──┴──────┬──┴──────┬──┴──────┲━━┻━━━━━━━━━━━━━━━━━━┫
+// ┃   ⇧     ┃ >   ≥ « │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ ;   ♡   │ :   ✓   │ _ – ◦   ┃                     ┃
+// ┃ Shift   ┃ < | ≤ » │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ , ‑ ʻ   │ . · … ̇ │ -  ­ •   ┃     Shift ⇧         ┃
+// ┣━━━━━━━━━┻━┳━━━━━━━┷━━┳━━━━━━┷━━━━┱────┴─────────┴─────────┴─────────┴─────────┴─────────┴──┲━━━━━━┷━━━┳━━━━━┷━━━━━┳━━━┻━━━━━━┳━━━━━━━━━━━━━━┫
+// ┃           ┃          ┃           ┃                                                         ┃          ┃           ┃          ┃              ┃
+// ┃ Ctrl      ┃ Super    ┃  Alt      ┃                Space                                    ┃ AltGr ⇮  ┃ FN        ┃ Menu     ┃ Ctrl         ┃
+// ┗━━━━━━━━━━━┻━━━━━━━━━━┻━━━━━━━━━━━┹─────────────────────────────────────────────────────────┺━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━┻━━━━━━━━━━━━━━┛
+
+default partial alphanumeric_keys
+xkb_symbols "sla_CyrsUcouke" {
+  include "sla(sla_base)"
+  	// sla_CYRS / sla_CYRL
+	///////////////////////// Слъавьанскъі /////////////////////////
+	name[Group1]= "(Слъавьанскъі)";
+	// EAST-EUROPEAN LAYOUT
+
+	// SECOND ROW
+    key.type[Group1] = "EIGHT_LEVEL_ALPHABETIC";
+    key <AD01> { [           U046B,      U046A,                U046D,    U046C,                   at,             NoSymbol,    U051B,    U051A ] }; // ѫ Ѫ ѭ Ѭ @ _ ԛ Ԛ
+    key <AD02> { [           U0446,      U0426,                U0481,    U0480,                 cent,            copyright, NoSymbol, NoSymbol ] }; // ц Ц ҁ Ҁ ¢ ©
+    key <AD03> { [           U0443,      U0423,                U044E,    U042E,                UA64B,                UA64A,    U0479,    U0478 ] }; // у У ю Ю ꙋ Ꙋ ѹ Ѹ
+    key <AD04> { [           U043A,      U041A,             NoSymbol, NoSymbol,             NoSymbol,             NoSymbol, NoSymbol, NoSymbol ] }; // к К
+    key <AD05> { [           U0435,      U0415,                U0454,    U0404,                U044D,                U042D,    U0465,    U0464 ] }; // е Е є Є э Э ѥ Ѥ
+    key <AD06> { [           U043D,      U041D,                U045A,    U040A,             NoSymbol,             NoSymbol, NoSymbol, NoSymbol ] }; // н Н њ Њ
+    key <AD07> { [           U0433,      U0413,                U0491,    U0490,           rightarrow,            leftarrow, NoSymbol, NoSymbol ] }; // г Г ґ Ґ → ←
+    key <AD08> { [           U0448,      U0428,                U0449,    U0429,            downarrow,              uparrow,    U0471,    U0470 ] }; // ш Ш щ Щ ↓ ↑ ѱ Ѱ
+    key <AD09> { [           U0456,      U0406,                U0458,    U0408,    			   U0457,                U0407, NoSymbol, NoSymbol ] }; // і І ј Ј ї Ї
+    key <AD10> { [           U0437,      U0417,                U046F,    U046E,                UA641,                UA640,    UA643,    UA642 ] }; // з З ѯ Ѯ ꙁ Ꙁ ꙃ Ꙃ
+    key <AD11> { [           U0445,      U0425,                U0304, NoSymbol,                U2198,                U2197,    U2196,    U2199 ] }; // х Х ̄ ↘ ↗ ↖ ↙
+
+    // THIRD ROW
+    key.type[Group1] = "EIGHT_LEVEL_ALPHABETIC";
+    key <AC01> { [           U0444,      U0424,                U0473,    U0472,             NoSymbol,             NoSymbol, NoSymbol, NoSymbol ] }; // ф Ф ѳ Ѳ
+    key <AC02> { [           U044B,      U042B,                UA651,    UA650,             NoSymbol,             NoSymbol, NoSymbol, NoSymbol ] }; // ы Ы ꙑ Ꙑ
+    key <AC03> { [           U0432,      U0412,             NoSymbol, NoSymbol,             NoSymbol,             NoSymbol,    U0475,    U0474 ] }; // в В _ _ _ _ ѵ Ѵ
+    key <AC04> { [           U0430,      U0410,                U044F,    U042F,                U0463,                U0462,    UA657,    UA656 ] }; // а А я Я ѣ Ѣ ꙗ Ꙗ
+    key <AC05> { [           U043F,      U041F,                U0486,    U0485,                U02BF,                U261B,    U02BE,    U261A ] }; // п П ҆ ҅ ʿ ☛ ʾ ☚
+    key <AC06> { [           U0440,      U0420,                U0306,    U0487,            trademark,           registered, NoSymbol, NoSymbol ] }; // р Р ̆ ҇ ™ ®
+    key <AC07> { [           U043E,      U041E,                U0461,    U0460,                U047B,                U047A,    U047D,    U047C ] }; // о О ѡ Ѡ ѻ Ѻ ѽ Ѽ
+    key <AC08> { [           U043B,      U041B,                U0459,    U0409,             NoSymbol,             NoSymbol, NoSymbol, NoSymbol ] }; // л Л љ Љ
+    key <AC09> { [           U0434,      U0414,                U0452,    U0402,             NoSymbol,             NoSymbol, NoSymbol, NoSymbol ] }; // д Д ђ Ђ
+    key <AC10> { [           U0436,      U0416,                U045F,    U040F,             NoSymbol,             NoSymbol, NoSymbol, NoSymbol ] }; // ж Ж џ Џ
+    key <AC11> { [           U044A,      U042A,                U044C,    U042C,             NoSymbol,             NoSymbol, NoSymbol, NoSymbol ] }; // ъ Ъ ь Ь
+
+    // FOURTH ROW
+    key.type[Group1] = "EIGHT_LEVEL_ALPHABETIC";
+    key <AB01> { [           U0467,      U0466,                U0469,    U0468,                U2423,                U23D1, NoSymbol, NoSymbol ] }; // ѧ Ѧ ѩ Ѩ ␣ ⏑
+    key <AB02> { [           U0447,      U0427,                U045B,    U040B,   doublelowquotemark,   singlelowquotemark,    UA649,    UA648 ] }; // ч Ч ћ Ћ „ ‚ ꙉ Ꙉ
+    key <AB03> { [           U0441,      U0421,                U0455,    U0405,             NoSymbol,                U2211, NoSymbol, NoSymbol ] }; // с С ѕ Ѕ _ ∑
+    key <AB04> { [           U043C,      U041C,                   mu, NoSymbol,  leftdoublequotemark,  leftsinglequotemark,    U200C,    U2217 ] }; // м М µ _ “ ‘ ‌ ∗
+    key <AB05> { [           U0438,      U0418,                U0439,    U0419, rightdoublequotemark, rightsinglequotemark, NoSymbol, NoSymbol ] }; // и И й Й ” ’
+    key <AB06> { [           U0442,      U0422,                U047F,    U047E,             NoSymbol,             NoSymbol, NoSymbol, NoSymbol ] }; // т Т ѿ Ѿ
+    key <AB07> { [           U0431,      U0411,                U0311,    U0484,             NoSymbol,             NoSymbol, NoSymbol, NoSymbol ] }; // б Б ̑ ҄
+};
+
+
+// sla_GlagUcouke TODO
+// ┌─────────┬─────────┬─────────┬─────────┬─────────┬─────────┬─────────┬─────────┬─────────┬─────────┬─────────┬─────────┬─────────┲━━━━━━━━━━━┓
+// │ ° ̂ ̊  ҃ │ !   ◊   │ "   ¦   │ §   ¶   │ $  ℳ ₴ │ % € ₰   │ &   ⁊   │ / ÷ №   │ ( ∞ ⟪   │ )   ⟫   │ =   ∅   │ ?    ¬  │ ̀ ̧ ͜  ̏ ┃ ⌫         ┃
+// │ ^ × ̈ ҂ │ 1 ’ ¼   │ 2 ² ½   │ 3 ³ ¾   │ 4 — ¤ ₽ │ 5 ¡ ‰ ¥ │ 6 ¿ ⁄    │ 7 { ⌀   │ 8 [ ⟨   │ 9 ] ⟩   │ 0 } ÷   │--- \ ≠  │ ́ ̇ £ ̋ ┃ Backspace ┃
+// ┢━━━━━━━━━┷━┱───────┴─┬───────┴─┬───────┴─┬───────┴─┬───────┴─┬───────┴─┬───────┴─┬───────┴─┬───────┴─┬───────┴─┬───────┴─┬───────┺━┯━━━━━━━━━┩
+// ┃           ┃ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ * ̃  ⁒  │ '   ‡   │
+// ┃ Tab ↹     ┃ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ + ~ ±   │ # − †   │
+// ┣━━━━━━━━━━━┻┱────────┴┬────────┴┬────────┴┬────────┴┬────────┴┬────────┴┬────────┴┬────────┴┬────────┴┬────────┴┬────────┴┲━━━━━━━━┷━━━━━━━━━┪
+// ┃ Caps       ┃ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 ┃ Enter            ┃
+// ┃ Lock ⇬     ┃ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 ┃ ⏎                ┃
+// ┣━━━━━━━━━┳━━┻──────┬──┴──────┬──┴──────┬──┴──────┬──┴──────┬──┴──────┬──┴──────┬──┴──────┬──┴──────┬──┴──────┬──┴──────┲━━┻━━━━━━━━━━━━━━━━━━┫
+// ┃   ⇧     ┃ >   ≥ « │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ ;   ♡   │ :   ✓   │ _ – ◦   ┃                     ┃
+// ┃ Shift   ┃ < | ≤ » │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ , ‑ ʻ   │ . · … ̇ │ -  ­ •   ┃     Shift ⇧         ┃
+// ┣━━━━━━━━━┻━┳━━━━━━━┷━━┳━━━━━━┷━━━━┱────┴─────────┴─────────┴─────────┴─────────┴─────────┴──┲━━━━━━┷━━━┳━━━━━┷━━━━━┳━━━┻━━━━━━┳━━━━━━━━━━━━━━┫
+// ┃           ┃          ┃           ┃                                                         ┃          ┃           ┃          ┃              ┃
+// ┃ Ctrl      ┃ Super    ┃  Alt      ┃                Space                                    ┃ AltGr ⇮  ┃ FN        ┃ Menu     ┃ Ctrl         ┃
+// ┗━━━━━━━━━━━┻━━━━━━━━━━┻━━━━━━━━━━━┹─────────────────────────────────────────────────────────┺━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━┻━━━━━━━━━━━━━━┛
+
+partial alphanumeric_keys
+xkb_symbols "sla_GlagUcouke" {
+  include "sla(sla_base)"
+	///////////////////////// Ⱄⰾⱏⰰⰲⱐⰰⱀⱄⰽⱏⱜ (Ⰳⰾⱏⰰⰳⱁⰾⱐⱜⱌⰰ) /////////////////////////
+	name[Group1]= "(Ⰳⰾⱏⰰⰳⱁⰾⱐⱜⱌⰰ)";
+	// EAST-EUROPEAN LAYOUT GLAGOLICA
+
+	// SECOND ROW
+    key.type[Group1] = "EIGHT_LEVEL_ALPHABETIC";
+    key <AD01> { [           U2C56,      U2C26,                U2C59,    U2C29,                   at,             NoSymbol, NoSymbol, NoSymbol ] }; // ⱖ Ⱖ ⱙ Ⱙ @
+    key <AD02> { [           U2C4C,      U2C1C,             NoSymbol, NoSymbol,                 cent,            copyright, NoSymbol, NoSymbol ] }; // ⱌ Ⱌ  _ _ ¢ ©
+    key <AD03> { [           U2C46,      U2C16,                U2C58,    U2C28,             NoSymbol,             NoSymbol, NoSymbol, NoSymbol ] }; // ⱆ Ⱆ ⱘ Ⱘ
+    key <AD04> { [           U2C3D,      U2C0D,             NoSymbol, NoSymbol,             NoSymbol,             NoSymbol, NoSymbol, NoSymbol ] }; // ⰽ Ⰽ
+    key <AD05> { [           U2C35,      U2C05,                U2C57,    U2C27,             NoSymbol,             NoSymbol, NoSymbol, NoSymbol ] }; // ⰵ Ⰵ ⱗ Ⱗ
+    key <AD06> { [           U2C40,      U2C10,             NoSymbol, NoSymbol,             NoSymbol,             NoSymbol, NoSymbol, NoSymbol ] }; // ⱀ Ⱀ
+    key <AD07> { [           U2C48,      U2C18,                U2C33,    U2C03,           rightarrow,            leftarrow, NoSymbol, NoSymbol ] }; // ⱈ Ⱈ ⰳ Ⰳ _ _ → ←
+    key <AD08> { [           U2C4E,      U2C1E,                U2C4B,    U2C1B,             NoSymbol,             NoSymbol, NoSymbol, NoSymbol ] }; // ⱎ Ⱎ ⱋ Ⱋ
+    key <AD09> { [           U2C5C,      U2C2C,                U2C54,    U2C24,                U2C39,                U2C09, NoSymbol, NoSymbol ] }; // ⱜ Ⱜ ⱔ Ⱔ  ⰹ Ⰹ
+    key <AD10> { [           U2C38,      U2C08,                U2C37,    U2C07,            downarrow,              uparrow, NoSymbol, NoSymbol ] }; // ⰸ Ⰸ ⰷ Ⰷ _ _ ↓ ↑
+    key <AD11> { [           U2C52,      U2C22,                U0304, NoSymbol,                U2198,                U2197,    U2196,    U2199 ] }; // ⱒ Ⱒ  ̄ ↘ ↗ ↖ ↙
+
+    // THIRD ROW
+    key.type[Group1] = "EIGHT_LEVEL_ALPHABETIC";
+    key <AC01> { [           U2C47,      U2C17,                U2C5A,    U2C2A,             NoSymbol,             NoSymbol, NoSymbol, NoSymbol ] }; // ⱇ Ⱇ ⱚ Ⱚ
+    key <AC02> { [           U2C3A,      U2C0A,             NoSymbol, NoSymbol,             NoSymbol,             NoSymbol, NoSymbol, NoSymbol ] }; // ⰺ Ⰺ
+    key <AC03> { [           U2C32,      U2C02,             NoSymbol, NoSymbol,             NoSymbol,             NoSymbol,    U2C5B,    U2C2B ] }; // ⰲ Ⰲ _ _ _ _ ⱛ Ⱛ
+    key <AC04> { [           U2C30,      U2C00,                U2C5D,    U2C2D,                U2C51,                U2C21, NoSymbol, NoSymbol ] }; // ⰰ Ⰰ ⱝ Ⱝ ⱑ Ⱑ
+    key <AC05> { [           U2C42,      U2C12,                U0486,    U0485,                U02BF,                U261B,    U02BE,    U261A ] }; // ⱂ Ⱂ ҆ ҅ ʿ ☛ ʾ ☚
+    key <AC06> { [           U2C43,      U2C13,                U0306,    U0487,            trademark,           registered, NoSymbol, NoSymbol ] }; // ⱃ Ⱃ ̆ ҇ ™ ®
+    key <AC07> { [           U2C41,      U2C11,                U2C49,    U2C19,             NoSymbol,             NoSymbol, NoSymbol, NoSymbol ] }; // ⱁ Ⱁ ⱉ Ⱉ
+    key <AC08> { [           U2C3E,      U2C0E,             NoSymbol, NoSymbol,             NoSymbol,             NoSymbol, NoSymbol, NoSymbol ] }; // ⰾ Ⰾ
+    key <AC09> { [           U2C34,      U2C04,                U2C3C,    U2C0C,             NoSymbol,             NoSymbol, NoSymbol, NoSymbol ] }; // ⰴ Ⰴ ⰼ Ⰼ
+    key <AC10> { [           U2C36,      U2C06,             NoSymbol, NoSymbol,             NoSymbol,             NoSymbol, NoSymbol, NoSymbol ] }; // ⰶ Ⰶ
+    key <AC11> { [           U2C4F,      U2C1F,                U2C50,    U2C20,                U2C53,                U2C23, NoSymbol, NoSymbol ] }; // ⱏ Ⱏ ⱐ Ⱐ ⱓ Ⱓ
+
+    // FOURTH ROW
+    key.type[Group1] = "EIGHT_LEVEL_ALPHABETIC";
+    key <AB01> { [           U2C54,      U2C24,                U2C55,    U2C25,                U2423,                U23D1, NoSymbol, NoSymbol ] }; // ⱔ Ⱔ ⱕ Ⱕ ␣ ⏑
+    key <AB02> { [           U2C4D,      U2C1D,             NoSymbol, NoSymbol,   doublelowquotemark,   singlelowquotemark, NoSymbol, NoSymbol ] }; // ⱍ Ⱍ „ ‚
+    key <AB03> { [           U2C44,      U2C14,             NoSymbol, NoSymbol,             NoSymbol,                U2211, NoSymbol, NoSymbol ] }; // ⱄ Ⱄ _ _ _ ∑
+    key <AB04> { [           U2C3F,      U2C0F,                U2C5E,    U2C2E,  leftdoublequotemark,  leftsinglequotemark,    U200C,    U2217 ] }; // ⰿ Ⰿ ⱞ Ⱞ “ ‘ ‌ ∗
+    key <AB05> { [           U2C3B,      U2C0B,                U2C3A,    U2C0A, rightdoublequotemark, rightsinglequotemark, NoSymbol, NoSymbol ] }; // ⰻ Ⰻ ⰺ Ⰺ ” ’
+    key <AB06> { [           U2C45,      U2C15,             NoSymbol, NoSymbol,             NoSymbol,             NoSymbol, NoSymbol, NoSymbol ] }; // ⱅ Ⱅ
+    key <AB07> { [           U2C31,      U2C01,                U0311,    U0484,             NoSymbol,             NoSymbol,    U2C4A,    U2C1A ] }; // ⰱ Ⰱ  ̑ ҄ _ _ ⱊ Ⱊ
+};
+
+
+// sla_LatnE1
+// ┌─────────┬─────────┬─────────┬─────────┬─────────┬─────────┬─────────┬─────────┬─────────┬─────────┬─────────┬─────────┬─────────┲━━━━━━━━━━━┓
+// │ °       │ !   ◊   │ "   ¦   │ §   ¶   │ $   ℳ  │ %   ₰   │ &   ⁊   │ /   №   │ (   ⟪   │ )   ⟫   │ =   ∅   │ ?   ¬   │ `    ͜   ┃ ⌫         ┃
+// │ ^ ×     │ 1 ’ ¼   │ 2 ² ½   │ 3 ³ ¾   │ 4 — ¤   │ 5 ¡ ‰   │ 6 ¿ ⁄    │ 7 { ⌀   │ 8 [ ⟨   │ 9 ] ⟩   │ 0 } ÷   │ ? \ ≠   │ ´ ˙ £   ┃ Backspace ┃
+// ┢━━━━━━━━━┷━┱───────┴─┬───────┴─┬───────┴─┬───────┴─┬───────┴─┬───────┴─┬───────┴─┬───────┴─┬───────┴─┬───────┴─┬───────┴─┬───────┺━┯━━━━━━━━━┩
+// ┃           ┃ Q   ♂   │ W   ♀   │ E       │ R   ®   │ T       │ Z   Ʒ   │ U   ←   │ I   ⚥   │ O   Ø   │ P   ↑   │ ʲ   ↗   │ *   ⁒   │ '   ‡   │
+// ┃ Tab ↹     ┃ q @ º   │ w ¯ ª   │ e € ə   │ r ˝ ™   │ t ˇ þ   │ z " ʒ ¨ │ u ˘ →   │ i ~ ı   │ o ° ø   │ p ̉ ↓   │ ᵑ ̛ ↘   │ + ~ ±   │ # − †   │
+// ┣━━━━━━━━━━━┻┱────────┴┬────────┴┬────────┴┬────────┴┬────────┴┬────────┴┬────────┴┬────────┴┬────────┴┬────────┴┬────────┴┲━━━━━━━━┷━━━━━━━━━┪
+// ┃ Caps       ┃ A       │ S   ∑   │ D   Ð   │ F ----- │ G   ☛   │ H   ☚   │ J   ʺ    │ K       │ L   Ł   │ Œ   Œ   │ Æ   Æ   ┃ Enter            ┃
+// ┃ Lock ⇬     ┃ a       │ s ″ ſ   │ d ′ ð   │ f ----- │ g ʰ ʿ   │ h ˍ ʾ   │ j ¸ ʹ   │ k ,     │ l ˛ ł   │ œ ̣ œ   │ æ / æ   ┃ ⏎                ┃
+// ┣━━━━━━━━━┳━━┻──────┬──┴──────┬──┴──────┬──┴──────┬──┴──────┬──┴──────┬──┴──────┬──┴──────┬──┴──────┬──┴──────┬──┴──────┲━━┻━━━━━━━━━━━━━━━━━━┫
+// ┃   ⇧     ┃ >   ≥   │ Y   ⏑   │ X   ‚   │ C   ©   │ V   ‘   │ B   ’   │ N   Ŋ   │ M   ∗  ‌ │ ;   ♡   │ :   ✓   │ _ ­ ◦    ┃                     ┃
+// ┃ Shift   ┃ < | ≤   │ y › ␣   │ x » „   │ c   ¢   │ v « “   │ b ‹ ”   │ n – ŋ   │ m µ ‌    │ , ‑ ‌ʻ   │ . · …   │ - ­ •    ┃     Shift ⇧         ┃
+// ┣━━━━━━━━━┻━┳━━━━━━━┷━━┳━━━━━━┷━━━━┱────┴─────────┴─────────┴─────────┴─────────┴─────────┴──┲━━━━━━┷━━━┳━━━━━┷━━━━━┳━━━┻━━━━━━┳━━━━━━━━━━━━━━┫
+// ┃           ┃          ┃           ┃                                                         ┃          ┃           ┃          ┃              ┃
+// ┃ Ctrl      ┃ Super    ┃  Alt      ┃                Space                                    ┃ AltGr ⇮  ┃ Fn        ┃ Menu     ┃ Ctrl         ┃
+// ┗━━━━━━━━━━━┻━━━━━━━━━━┻━━━━━━━━━━━┹─────────────────────────────────────────────────────────┺━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━┻━━━━━━━━━━━━━━┛
+
+partial alphanumeric_keys
+xkb_symbols "sla_LatnE1" {
+  include "de(e1)"
+	///////////////////////// Medzhueslqavyanskqie (Latinica E1) /////////////////////////
+	name[Group1]= "(Latinica E1)";
+	// EUROPEAN LAYOUT LATIN
+
+    key <AE11> { [ 	 question, NoSymbol, 	 backslash, NoSymbol, notequal, 	U00AC, NoSymbol, NoSymbol ] }; //
+	key <AD11> { [ 	    U1D51, 	  U02B2, 	 dead_horn, NoSymbol, 	 U2198, 	U2197, NoSymbol, NoSymbol ] }; //
+	key <AC05> { [          g,        G,      	 U02B0, NoSymbol,    U02BF,     U261B, NoSymbol, NoSymbol ] }; //
+	key <AC10> { [		   oe,		 OE, dead_belowdot, NoSymbol, NoSymbol,  NoSymbol, NoSymbol, NoSymbol ] }; //
+	key <AC11> { [		   ae,		 AE,   dead_stroke, NoSymbol, NoSymbol,  NoSymbol, NoSymbol, NoSymbol ] }; //
+};
+
+
+// sla_CyrlE1 TODO
+// ┌─────────┬─────────┬─────────┬─────────┬─────────┬─────────┬─────────┬─────────┬─────────┬─────────┬─────────┬─────────┬─────────┲━━━━━━━━━━━┓
+// │ ° ̂ ̊  ҃ │ !   ◊   │ "   ¦   │ §   ¶   │ $  ℳ ₴ │ % € ₰   │ &   ⁊   │ / ÷ №   │ ( ∞ ⟪   │ )   ⟫   │ =   ∅   │ ?    ¬  │ ̀ ̧ ͜  ̏ ┃ ⌫         ┃
+// │ ^ × ̈ ҂ │ 1 ’ ¼   │ 2 ² ½   │ 3 ³ ¾   │ 4 — ¤ ₽ │ 5 ¡ ‰ ¥ │ 6 ¿ ⁄    │ 7 { ⌀   │ 8 [ ⟨   │ 9 ] ⟩   │ 0 } ÷   │--- \ ≠  │ ́ ̇ £ ̋ ┃ Backspace ┃
+// ┢━━━━━━━━━┷━┱───────┴─┬───────┴─┬───────┴─┬───────┴─┬───────┴─┬───────┴─┬───────┴─┬───────┴─┬───────┴─┬───────┴─┬───────┴─┬───────┺━┯━━━━━━━━━┩
+// ┃           ┃ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ * ̃  ⁒  │ '   ‡   │
+// ┃ Tab ↹     ┃ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ + ~ ±   │ # − †   │
+// ┣━━━━━━━━━━━┻┱────────┴┬────────┴┬────────┴┬────────┴┬────────┴┬────────┴┬────────┴┬────────┴┬────────┴┬────────┴┬────────┴┲━━━━━━━━┷━━━━━━━━━┪
+// ┃ Caps       ┃ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 ┃ Enter            ┃
+// ┃ Lock ⇬     ┃ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 ┃ ⏎                ┃
+// ┣━━━━━━━━━┳━━┻──────┬──┴──────┬──┴──────┬──┴──────┬──┴──────┬──┴──────┬──┴──────┬──┴──────┬──┴──────┬──┴──────┬──┴──────┲━━┻━━━━━━━━━━━━━━━━━━┫
+// ┃   ⇧     ┃ >   ≥ « │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ ;   ♡   │ :   ✓   │ _ – ◦   ┃                     ┃
+// ┃ Shift   ┃ < | ≤ » │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ , ‑ ʻ   │ . · … ̇ │ -  ­ •   ┃     Shift ⇧         ┃
+// ┣━━━━━━━━━┻━┳━━━━━━━┷━━┳━━━━━━┷━━━━┱────┴─────────┴─────────┴─────────┴─────────┴─────────┴──┲━━━━━━┷━━━┳━━━━━┷━━━━━┳━━━┻━━━━━━┳━━━━━━━━━━━━━━┫
+// ┃           ┃          ┃           ┃                                                         ┃          ┃           ┃          ┃              ┃
+// ┃ Ctrl      ┃ Super    ┃  Alt      ┃                Space                                    ┃ AltGr ⇮  ┃ FN        ┃ Menu     ┃ Ctrl         ┃
+// ┗━━━━━━━━━━━┻━━━━━━━━━━┻━━━━━━━━━━━┹─────────────────────────────────────────────────────────┺━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━┻━━━━━━━━━━━━━━┛
+
+partial alphanumeric_keys
+xkb_symbols "sla_CyrlE1" {
+  include "sla(sla_base)"
+	///////////////////////// Меджуслъавьанскъі (Кьірьіліца Е1) /////////////////////////
+	name[Group1]= "(Кьірьіліца Е1)";
+	// WEST-EUROPEAN LAYOUT
+
+	// SECOND ROW
+    key.type[Group1] = "EIGHT_LEVEL_ALPHABETIC";
+    key <AD01> { [           U044A,      U042A,                U044C,    U042C,                   at,             NoSymbol, NoSymbol, NoSymbol ] }; // ъ Ъ ь Ь @
+    key <AD02> { [           U0443,      U0423,                U044E,    U042E,                UA64B,                UA64A,    U0479,    U0478 ] }; // у У ю Ю ꙋ Ꙋ ѹ Ѹ
+    key <AD03> { [           U0435,      U0415,                U0454,    U0404,                U044D,                U042D,    U0465,    U0464 ] }; // е Е є Є э Э ѥ Ѥ
+    key <AD04> { [           U0440,      U0420,                U0306,    U0487,            trademark,           registered, NoSymbol, NoSymbol ] }; // р Р ̆ ҇ ™ ®
+    key <AD05> { [           U0442,      U0422,                U047F,    U047E,             NoSymbol,             NoSymbol, NoSymbol, NoSymbol ] }; // т Т ѿ Ѿ
+    key <AD06> { [           U0437,      U0417,                U046F,    U046E,                UA641,                UA640,    UA643,    UA642 ] }; // з З ѯ Ѯ ꙁ Ꙁ ꙃ Ꙃ
+    key <AD07> { [           U046B,      U046A,                U046D,    U046C,           rightarrow,            leftarrow,    U051B,    U051A ] }; // ѫ Ѫ ѭ Ѭ → ← ԛ Ԛ
+    key <AD08> { [           U0438,      U0418,                U0439,    U0419,             NoSymbol,             NoSymbol, NoSymbol, NoSymbol ] }; // и И й Й
+    key <AD09> { [           U043E,      U041E,                U0461,    U0460,                U047B,                U047A,    U047D,    U047C ] }; // о О ѡ Ѡ ѻ Ѻ ѽ Ѽ
+    key <AD10> { [           U043F,      U041F,                U0486,    U0485,            downarrow,              uparrow, NoSymbol, NoSymbol ] }; // п П ҆ ҅ ↓ ↑
+    key <AD11> { [           U044B,      U042B,                UA651,    UA650,                U2198,                U2197,    U2196,    U2199 ] }; // ы Ы ꙑ Ꙑ ↘ ↗ ↖ ↙
+
+    // THIRD ROW
+    key.type[Group1] = "EIGHT_LEVEL_ALPHABETIC";
+    key <AC01> { [           U0430,      U0410,                U044F,    U042F,                U0463,                U0462,    UA657,    UA656 ] }; // а А я Я ѣ Ѣ ꙗ Ꙗ
+    key <AC02> { [           U0441,      U0421,                U0455,    U0405,             NoSymbol,                U2211, NoSymbol, NoSymbol ] }; // с С ѕ Ѕ _ ∑
+    key <AC03> { [           U0434,      U0414,                U0452,    U0402,             NoSymbol,             NoSymbol, NoSymbol, NoSymbol ] }; // д Д ђ Ђ
+    key <AC04> { [           U0444,      U0424,                U0473,    U0472,             NoSymbol,             NoSymbol, NoSymbol, NoSymbol ] }; // ф Ф ѳ Ѳ
+    key <AC05> { [           U0436,      U0416,                U045F,    U040F,                U02BF,                U261B,    U02BE,    U261A ] }; // ж Ж џ Џ ʿ ☛ ʾ ☚
+    key <AC06> { [           U0433,      U0413,                U0491,    U0490,             NoSymbol,             NoSymbol, NoSymbol, NoSymbol ] }; // г Г ґ Ґ
+    key <AC07> { [           U0456,      U0406,                U0458,    U0408,    			   U0457,    			 U0407, NoSymbol, NoSymbol ] }; // і І ј Ј ї Ї
+    key <AC08> { [           U043A,      U041A,             NoSymbol, NoSymbol,             NoSymbol,             NoSymbol, NoSymbol, NoSymbol ] }; // к К
+    key <AC09> { [           U043B,      U041B,                U0459,    U0409,             NoSymbol,             NoSymbol, NoSymbol, NoSymbol ] }; // л Л љ Љ
+    key <AC10> { [           U0447,      U0427,                U045B,    U040B,             NoSymbol,             NoSymbol,    UA649,    UA648 ] }; // ч Ч ћ Ћ _ _ ꙉ Ꙉ
+    key <AC11> { [           U0467,      U0466,                U0469,    U0468,             NoSymbol,             NoSymbol, NoSymbol, NoSymbol ] }; // ѧ Ѧ ѩ Ѩ
+
+    // FOURTH ROW
+    key.type[Group1] = "EIGHT_LEVEL_ALPHABETIC";
+    key <AB01> { [           U0448,      U0428,                U0449,    U0429,                U2423,                U23D1,    U0471,    U0470 ] }; // ш Ш щ Щ ␣ ⏑ ѱ Ѱ
+    key <AB02> { [           U0445,      U0425,                U0304, NoSymbol,   doublelowquotemark,   singlelowquotemark, NoSymbol, NoSymbol ] }; // х Х ̄ _ „ ‚
+    key <AB03> { [           U0446,      U0426,                U0481,    U0480,                 cent,            copyright, NoSymbol, NoSymbol ] }; // ц Ц ҁ Ҁ ¢ ©
+    key <AB04> { [           U0432,      U0412,             NoSymbol, NoSymbol,  leftdoublequotemark,  leftsinglequotemark,    U0475,    U0474 ] }; // в В _ _ “ ‘ ѵ Ѵ
+    key <AB05> { [           U0431,      U0411,                U0311,    U0484, rightdoublequotemark, rightsinglequotemark, NoSymbol, NoSymbol ] }; // б Б ̑ ҄ ” ’
+    key <AB06> { [           U043D,      U041D,                U045A,    U040A,             NoSymbol,             NoSymbol, NoSymbol, NoSymbol ] }; // н Н њ Њ
+    key <AB07> { [           U043C,      U041C,                   mu, NoSymbol,             NoSymbol,             NoSymbol,    U200C,    U2217 ] }; // м М ‌µ _ _ _ ‌ ∗
+};
+
+
+// sla_GlagE1 TODO
+// ┌─────────┬─────────┬─────────┬─────────┬─────────┬─────────┬─────────┬─────────┬─────────┬─────────┬─────────┬─────────┬─────────┲━━━━━━━━━━━┓
+// │ ° ̂ ̊  ҃ │ !   ◊   │ "   ¦   │ §   ¶   │ $  ℳ ₴ │ % € ₰   │ &   ⁊   │ / ÷ №   │ ( ∞ ⟪   │ )   ⟫   │ =   ∅   │ ?    ¬  │ ̀ ̧ ͜  ̏ ┃ ⌫         ┃
+// │ ^ × ̈ ҂ │ 1 ’ ¼   │ 2 ² ½   │ 3 ³ ¾   │ 4 — ¤ ₽ │ 5 ¡ ‰ ¥ │ 6 ¿ ⁄    │ 7 { ⌀   │ 8 [ ⟨   │ 9 ] ⟩   │ 0 } ÷   │--- \ ≠  │ ́ ̇ £ ̋ ┃ Backspace ┃
+// ┢━━━━━━━━━┷━┱───────┴─┬───────┴─┬───────┴─┬───────┴─┬───────┴─┬───────┴─┬───────┴─┬───────┴─┬───────┴─┬───────┴─┬───────┴─┬───────┺━┯━━━━━━━━━┩
+// ┃           ┃ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ * ̃  ⁒  │ '   ‡   │
+// ┃ Tab ↹     ┃ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ + ~ ±   │ # − †   │
+// ┣━━━━━━━━━━━┻┱────────┴┬────────┴┬────────┴┬────────┴┬────────┴┬────────┴┬────────┴┬────────┴┬────────┴┬────────┴┬────────┴┲━━━━━━━━┷━━━━━━━━━┪
+// ┃ Caps       ┃ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 ┃ Enter            ┃
+// ┃ Lock ⇬     ┃ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 ┃ ⏎                ┃
+// ┣━━━━━━━━━┳━━┻──────┬──┴──────┬──┴──────┬──┴──────┬──┴──────┬──┴──────┬──┴──────┬──┴──────┬──┴──────┬──┴──────┬──┴──────┲━━┻━━━━━━━━━━━━━━━━━━┫
+// ┃   ⇧     ┃ >   ≥ « │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ ;   ♡   │ :   ✓   │ _ – ◦   ┃                     ┃
+// ┃ Shift   ┃ < | ≤ » │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ , ‑ ʻ   │ . · … ̇ │ -  ­ •   ┃     Shift ⇧         ┃
+// ┣━━━━━━━━━┻━┳━━━━━━━┷━━┳━━━━━━┷━━━━┱────┴─────────┴─────────┴─────────┴─────────┴─────────┴──┲━━━━━━┷━━━┳━━━━━┷━━━━━┳━━━┻━━━━━━┳━━━━━━━━━━━━━━┫
+// ┃           ┃          ┃           ┃                                                         ┃          ┃           ┃          ┃              ┃
+// ┃ Ctrl      ┃ Super    ┃  Alt      ┃                Space                                    ┃ AltGr ⇮  ┃ FN        ┃ Menu     ┃ Ctrl         ┃
+// ┗━━━━━━━━━━━┻━━━━━━━━━━┻━━━━━━━━━━━┹─────────────────────────────────────────────────────────┺━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━┻━━━━━━━━━━━━━━┛
+
+partial alphanumeric_keys
+xkb_symbols "sla_GlagE1" {
+  include "sla(sla_base)"
+	///////////////////////// Ⱄⰾⱏⰰⰲⱐⰰⱀⱄⰽⱏⱜ (Ⰽⱐⱜⱃⱜⰾⰾⱁⰲⱐⱜⱌⰰ Ⰵⰰ҃) /////////////////////////
+	name[Group1]= "(Ⰽⱛⱃⰺⰾⰾⱁⰲⰺⱌⰰ Ⰵⰰ҃)";
+	// WEST-EUROPEAN LAYOUT GLAGOLICA
+
+	// SECOND ROW
+    key.type[Group1] = "EIGHT_LEVEL_ALPHABETIC";
+    key <AD01> { [           U2C4F,      U2C1F,                U2C50,    U2C20,                U2C53,                U2C23,       at, NoSymbol ] }; // ⱏ Ⱏ ⱐ Ⱐ ⱓ Ⱓ @
+    key <AD02> { [           U2C46,      U2C16,                U2C58,    U2C28,             NoSymbol,             NoSymbol, NoSymbol, NoSymbol ] }; // ⱆ Ⱆ ⱘ Ⱘ
+    key <AD03> { [           U2C35,      U2C05,                U2C57,    U2C27,             NoSymbol,             NoSymbol, NoSymbol, NoSymbol ] }; // ⰵ Ⰵ ⱗ Ⱗ
+    key <AD04> { [           U2C43,      U2C13,                U0306,    U0487,            trademark,           registered, NoSymbol, NoSymbol ] }; // ⱃ Ⱃ ̆ ҇ ™ ®
+    key <AD05> { [           U2C45,      U2C15,             NoSymbol, NoSymbol,             NoSymbol,             NoSymbol, NoSymbol, NoSymbol ] }; // ⱅ Ⱅ
+    key <AD06> { [           U2C38,      U2C08,                U2C37,    U2C07,             NoSymbol,             NoSymbol, NoSymbol, NoSymbol ] }; // ⰸ Ⰸ ⰷ Ⰷ
+    key <AD07> { [           U2C56,      U2C26,                U2C59,    U2C29,           rightarrow,            leftarrow, NoSymbol, NoSymbol ] }; // ⱖ Ⱖ ⱙ Ⱙ → ←
+    key <AD08> { [           U2C3B,      U2C0B,                U2C3A,    U2C0A,             NoSymbol,             NoSymbol, NoSymbol, NoSymbol ] }; // ⰻ Ⰻ ⰺ Ⰺ
+    key <AD09> { [           U2C41,      U2C11,                U2C49,    U2C19,             NoSymbol,             NoSymbol, NoSymbol, NoSymbol ] }; // ⱁ Ⱁ ⱉ Ⱉ
+    key <AD10> { [           U2C42,      U2C12,                U0486,    U0485,            downarrow,              uparrow, NoSymbol, NoSymbol ] }; // ⱂ Ⱂ ҆ ҅ ↓ ↑
+    key <AD11> { [           U2C3A,      U2C0A,             NoSymbol, NoSymbol,                U2198,                U2197,    U2196,    U2199 ] }; // ⰺ Ⰺ _ _ ↘ ↗ ↖ ↙
+
+    // THIRD ROW
+    key.type[Group1] = "EIGHT_LEVEL_ALPHABETIC";
+    key <AC01> { [           U2C30,      U2C00,                U2C5D,    U2C2D,                U2C51,                U2C21, NoSymbol, NoSymbol ] }; // ⰰ Ⰰ ⱝ Ⱝ ⱑ Ⱑ
+    key <AC02> { [           U2C44,      U2C14,             NoSymbol, NoSymbol,             NoSymbol,                U2211, NoSymbol, NoSymbol ] }; // ⱄ Ⱄ _ _ _ ∑
+    key <AC03> { [           U2C34,      U2C04,                U2C3C,    U2C0C,             NoSymbol,             NoSymbol, NoSymbol, NoSymbol ] }; // ⰴ Ⰴ ⰼ Ⰼ
+    key <AC04> { [           U2C47,      U2C17,                U2C5A,    U2C2A,             NoSymbol,             NoSymbol, NoSymbol, NoSymbol ] }; // ⱇ Ⱇ ⱚ Ⱚ
+    key <AC05> { [           U2C36,      U2C06,             NoSymbol, NoSymbol,                U02BF,                U261B,    U02BE,    U261A ] }; // ⰶ Ⰶ _ _ ʿ ☛ ʾ ☚
+    key <AC06> { [           U2C48,      U2C18,                U2C33,    U2C03,             NoSymbol,             NoSymbol, NoSymbol, NoSymbol ] }; // ⱈ Ⱈ ⰳ Ⰳ
+    key <AC07> { [           U2C5C,      U2C2C,                U2C54,    U2C24,                U2C39,                U2C09, NoSymbol, NoSymbol ] }; // ⱜ Ⱜ ⱔ Ⱔ  ⰹ Ⰹ
+    key <AC08> { [           U2C3D,      U2C0D,             NoSymbol, NoSymbol,             NoSymbol,             NoSymbol, NoSymbol, NoSymbol ] }; // ⰽ Ⰽ
+    key <AC09> { [           U2C3E,      U2C0E,             NoSymbol, NoSymbol,             NoSymbol,             NoSymbol, NoSymbol, NoSymbol ] }; // ⰾ Ⰾ
+    key <AC10> { [           U2C4D,      U2C1D,             NoSymbol, NoSymbol,             NoSymbol,             NoSymbol, NoSymbol, NoSymbol ] }; // ⱍ Ⱍ
+    key <AC11> { [           U2C54,      U2C24,                U2C55,    U2C25,             NoSymbol,             NoSymbol, NoSymbol, NoSymbol ] }; // ⱔ Ⱔ ⱕ Ⱕ
+
+    // FOURTH ROW
+    key.type[Group1] = "EIGHT_LEVEL_ALPHABETIC";
+    key <AB01> { [           U2C4E,      U2C1E,                U2C4B,    U2C1B,                U2423,                U23D1, NoSymbol, NoSymbol ] }; // ⱎ Ⱎ ⱋ Ⱋ ␣ ⏑
+    key <AB02> { [           U2C52,      U2C22,                U0304, NoSymbol,   doublelowquotemark,   singlelowquotemark, NoSymbol, NoSymbol ] }; // ⱒ Ⱒ ̄ _ „ ‚
+    key <AB03> { [           U2C4C,      U2C1C,             NoSymbol, NoSymbol,                 cent,            copyright, NoSymbol, NoSymbol ] }; // ⱌ Ⱌ _ _ ¢ ©
+    key <AB04> { [           U2C32,      U2C02,             NoSymbol, NoSymbol,  leftdoublequotemark,  leftsinglequotemark,    U2C5B,    U2C2B ] }; // ⰲ Ⰲ _ _ “ ‘ ⱛ Ⱛ
+    key <AB05> { [           U2C31,      U2C01,                U0311,    U0484, rightdoublequotemark, rightsinglequotemark,    U2C4A,    U2C1A ] }; // ⰱ Ⰱ ̑ ҄ ” ’ ⱊ Ⱊ
+    key <AB06> { [           U2C40,      U2C10,             NoSymbol, NoSymbol,             NoSymbol,             NoSymbol, NoSymbol, NoSymbol ] }; // ⱀ Ⱀ
+    key <AB07> { [           U2C3F,      U2C0F,                U2C5E,    U2C2E,             NoSymbol,             NoSymbol,    U200C,    U2217 ] }; // ⰿ Ⰿ ⱞ Ⱞ _ _ ‌ ∗
+};
+
+
+// sla_BGBDS TODO
+// ┌─────────┬─────────┬─────────┬─────────┬─────────┬─────────┬─────────┬─────────┬─────────┬─────────┬─────────┬─────────┬─────────┲━━━━━━━━━━━┓
+// │ ° ̂ ̊  ҃ │ !   ◊   │ "   ¦   │ §   ¶   │ $  ℳ ₴ │ % € ₰   │ &   ⁊   │ / ÷ №   │ ( ∞ ⟪   │ )   ⟫   │ =   ∅   │ ?    ¬  │ ̀ ̧ ͜  ̏ ┃ ⌫         ┃
+// │ ^ × ̈ ҂ │ 1 ’ ¼   │ 2 ² ½   │ 3 ³ ¾   │ 4 — ¤ ₽ │ 5 ¡ ‰ ¥ │ 6 ¿ ⁄    │ 7 { ⌀   │ 8 [ ⟨   │ 9 ] ⟩   │ 0 } ÷   │--- \ ≠  │ ́ ̇ £ ̋ ┃ Backspace ┃
+// ┢━━━━━━━━━┷━┱───────┴─┬───────┴─┬───────┴─┬───────┴─┬───────┴─┬───────┴─┬───────┴─┬───────┴─┬───────┴─┬───────┴─┬───────┴─┬───────┺━┯━━━━━━━━━┩
+// ┃           ┃ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ * ̃  ⁒  │ '   ‡   │
+// ┃ Tab ↹     ┃ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ + ~ ±   │ # − †   │
+// ┣━━━━━━━━━━━┻┱────────┴┬────────┴┬────────┴┬────────┴┬────────┴┬────────┴┬────────┴┬────────┴┬────────┴┬────────┴┬────────┴┲━━━━━━━━┷━━━━━━━━━┪
+// ┃ Caps       ┃ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 ┃ Enter            ┃
+// ┃ Lock ⇬     ┃ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 ┃ ⏎                ┃
+// ┣━━━━━━━━━┳━━┻──────┬──┴──────┬──┴──────┬──┴──────┬──┴──────┬──┴──────┬──┴──────┬──┴──────┬──┴──────┬──┴──────┬──┴──────┲━━┻━━━━━━━━━━━━━━━━━━┫
+// ┃   ⇧     ┃ >   ≥ « │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ ;   ♡   │ :   ✓   │ _ – ◦   ┃                     ┃
+// ┃ Shift   ┃ < | ≤ » │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ 1 1 1 1 │ , ‑ ʻ   │ . · … ̇ │ -  ­ •   ┃     Shift ⇧         ┃
+// ┣━━━━━━━━━┻━┳━━━━━━━┷━━┳━━━━━━┷━━━━┱────┴─────────┴─────────┴─────────┴─────────┴─────────┴──┲━━━━━━┷━━━┳━━━━━┷━━━━━┳━━━┻━━━━━━┳━━━━━━━━━━━━━━┫
+// ┃           ┃          ┃           ┃                                                         ┃          ┃           ┃          ┃              ┃
+// ┃ Ctrl      ┃ Super    ┃  Alt      ┃                Space                                    ┃ AltGr ⇮  ┃ FN        ┃ Menu     ┃ Ctrl         ┃
+// ┗━━━━━━━━━━━┻━━━━━━━━━━┻━━━━━━━━━━━┹─────────────────────────────────────────────────────────┺━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━┻━━━━━━━━━━━━━━┛
+
+// TODO

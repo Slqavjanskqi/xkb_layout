@@ -1,0 +1,44 @@
+    <layout>
+      <configItem>
+        <name>sla</name>
+<!-- Keyboard indicator for Slavic layouts -->
+        <shortDescription>мс</shortDescription>
+        <description>Слъавьанскъі</description>
+        <languageList>
+          <iso639Id>sla</iso639Id>
+        </languageList>
+      </configItem>
+      <variantList>
+        <variant>
+          <configItem>
+            <name>sla_CyrsUcouke</name>
+            <description>(Слъавьанскъі)</description>
+          </configItem>
+        </variant>
+        <variant>
+          <configItem>
+            <name>sla_GlagUcouke</name>
+            <description>(Ⰳⰾⱏⰰⰳⱁⰾⱐⱜⱌⰰ)</description>
+          </configItem>
+        </variant>
+        <variant>
+          <configItem>
+            <name>sla_LatnE1</name>
+            <description>(Latinica E1)</description>
+          </configItem>
+        </variant>
+        <variant>
+          <configItem>
+            <name>sla_CyrlE1</name>
+            <description>(Кьірьіліца Е1)</description>
+          </configItem>
+        </variant>
+        <variant>
+          <configItem>
+            <name>sla_GlagE1</name>
+            <description>(Ⰽⱐⱜⱃⱜⰾⰾⱁⰲⱐⱜⱌⰰ Ⰵⰰ҃)</description>
+          </configItem>
+        </variant>
+      </variantList>
+    </layout>
+
