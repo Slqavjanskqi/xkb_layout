@@ -96,14 +96,14 @@ def checkOSFiles(target, base, evdev):
         if os.path.exists(target + "sla"):
             os.remove(target + "sla")
 
-            if not os.path.exists("./XMLsBackup/base"):
+            if not os.path.exists("./XMLsBackup/base.xml"):
                 shutil.copy(base, "./XMLsBackup/")
             else:
                 # TODO optional override or not parser
                 print("The Old Backup-files will be not overridden, please backup your old-backup-files manually")
                 return False
 
-            if not os.path.exists("./XMLsBackup/evdev"):
+            if not os.path.exists("./XMLsBackup/evdev.xml"):
                 shutil.copy(evdev, "./XMLsBackup/")
             else:
                 # TODO optional override or not parser
