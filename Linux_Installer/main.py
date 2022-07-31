@@ -3,8 +3,8 @@ import platform
 import shutil
 import xml.etree.ElementTree
 
-slafile = "../Linux XKB/sla"
-slaxml = "../Linux XKB/slaXML"
+slafile = "../Linux_XKB/sla"
+slaxml = "../Linux_XKB/slaXML"
 newbasexml = "XMLsBackup/new_base.xml"
 newevdevxml = "XMLsBackup/new_evdev.xml"
 
@@ -95,8 +95,21 @@ def checkOSFiles(target, base, evdev):
     if os.path.exists(target) & os.path.exists(base) & os.path.exists(evdev):
         if os.path.exists(target + "sla"):
             os.remove(target + "sla")
-        shutil.copy(base, "./XMLsBackup/")
-        shutil.copy(evdev, "./XMLsBackup/")
+
+            if not os.path.exists("./XMLsBackup/base"):
+                shutil.copy(base, "./XMLsBackup/")
+            else:
+                # TODO optional override or not parser
+                print("The Old Backup-files will be not overridden, please backup your old-backup-files manually")
+                return False
+
+            if not os.path.exists("./XMLsBackup/evdev"):
+                shutil.copy(evdev, "./XMLsBackup/")
+            else:
+                # TODO optional override or not parser
+                print("The Old Backup-files will be not overridden, please backup your old-backup-files manually")
+                return False
+
         return checkXMLEntries(base, evdev)
     print("Distribution or its version unknown!")
     return False
@@ -106,7 +119,7 @@ def checkOSFiles(target, base, evdev):
 def selector(distribution):
     target, base, evdev = "", "", ""
 
-    # TODO check destribution-depending locations and add them
+    # TODO check distribution-depending paths and save them
     if "Debian" in distribution:
         print(distribution)
     elif "Ubuntu" in distribution:
@@ -144,7 +157,7 @@ def checkIntegrity():
 
 
 def main():
-    # TODO For now this installer is just for Linux systems
+
     if not platform.system().__eq__("Linux"):
         print("Unsupported System: " + platform.system())
     else:
