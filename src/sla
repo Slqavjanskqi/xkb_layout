@@ -1,7 +1,7 @@
 // LINUX XKB LAYOUT FILE
 // SLQAWYANSKQIE (MODERN SLAVIC LAYOUTs)
 // 2018-07-14 © Кърчьаковъ, Ръаманъ П.
-// Currect Version: 3.5
+// Currect Version: 3.6
 
 
 // SLA_BASE
@@ -133,22 +133,22 @@ xkb_symbols "sla_CyrsUcouke" {
 	// SECOND ROW
     key.type[Group1] = "EIGHT_LEVEL_ALPHABETIC";
     key <AD01> { [           U046B,      U046A,                U046D,    U046C,                   at,             NoSymbol,    U051B,    U051A ] }; // ѫ Ѫ ѭ Ѭ @ _ ԛ Ԛ
-    key <AD02> { [           U0446,      U0426,                U0481,    U0480,                 cent,            copyright, NoSymbol, NoSymbol ] }; // ц Ц ҁ Ҁ ¢ ©
+    key <AD02> { [           U0446,      U0426,             NoSymbol, NoSymbol,                 cent,            copyright, NoSymbol, NoSymbol ] }; // ц Ц _ _ ¢ ©
     key <AD03> { [           U0443,      U0423,                U044E,    U042E,                UA64B,                UA64A,    U0479,    U0478 ] }; // у У ю Ю ꙋ Ꙋ ѹ Ѹ
-    key <AD04> { [           U043A,      U041A,             NoSymbol, NoSymbol,             NoSymbol,             NoSymbol, NoSymbol, NoSymbol ] }; // к К
+    key <AD04> { [           U043A,      U041A,                U0481,    U0480,             NoSymbol,             NoSymbol, NoSymbol, NoSymbol ] }; // к К ҁ Ҁ
     key <AD05> { [           U0435,      U0415,                U0454,    U0404,                U044D,                U042D,    U0465,    U0464 ] }; // е Е є Є э Э ѥ Ѥ
     key <AD06> { [           U043D,      U041D,                U045A,    U040A,             NoSymbol,             NoSymbol, NoSymbol, NoSymbol ] }; // н Н њ Њ
     key <AD07> { [           U0433,      U0413,                U0491,    U0490,           rightarrow,            leftarrow, NoSymbol, NoSymbol ] }; // г Г ґ Ґ → ←
     key <AD08> { [           U0448,      U0428,                U0449,    U0429,            downarrow,              uparrow,    U0471,    U0470 ] }; // ш Ш щ Щ ↓ ↑ ѱ Ѱ
     key <AD09> { [           U0456,      U0406,                U0458,    U0408,    			   U0457,                U0407, NoSymbol, NoSymbol ] }; // і І ј Ј ї Ї
-    key <AD10> { [           U0437,      U0417,                U046F,    U046E,                UA641,                UA640,    UA643,    UA642 ] }; // з З ѯ Ѯ ꙁ Ꙁ ꙃ Ꙃ
+    key <AD10> { [           U0437,      U0417,                U0455,    U0405,                UA641,                UA640,    UA643,    UA642 ] }; // з З ѕ Ѕ ꙁ Ꙁ ꙃ Ꙃ
     key <AD11> { [           U0445,      U0425,                U0304, NoSymbol,                U2198,                U2197,    U2196,    U2199 ] }; // х Х ̄ ↘ ↗ ↖ ↙
 
     // THIRD ROW
     key.type[Group1] = "EIGHT_LEVEL_ALPHABETIC";
     key <AC01> { [           U0444,      U0424,                U0473,    U0472,             NoSymbol,             NoSymbol, NoSymbol, NoSymbol ] }; // ф Ф ѳ Ѳ
     key <AC02> { [           U044B,      U042B,                UA651,    UA650,             NoSymbol,             NoSymbol, NoSymbol, NoSymbol ] }; // ы Ы ꙑ Ꙑ
-    key <AC03> { [           U0432,      U0412,             NoSymbol, NoSymbol,             NoSymbol,             NoSymbol,    U0475,    U0474 ] }; // в В _ _ _ _ ѵ Ѵ
+    key <AC03> { [           U0432,      U0412,                U0475,    U0474,             NoSymbol,             NoSymbol, NoSymbol, NoSymbol ] }; // в В ѵ Ѵ _ _ _ _
     key <AC04> { [           U0430,      U0410,                U044F,    U042F,                U0463,                U0462,    UA657,    UA656 ] }; // а А я Я ѣ Ѣ ꙗ Ꙗ
     key <AC05> { [           U043F,      U041F,                U0486,    U0485,                U02BF,                U261B,    U02BE,    U261A ] }; // п П ҆ ҅ ʿ ☛ ʾ ☚
     key <AC06> { [           U0440,      U0420,                U0306,    U0487,            trademark,           registered, NoSymbol, NoSymbol ] }; // р Р ̆ ҇ ™ ®
@@ -162,7 +162,7 @@ xkb_symbols "sla_CyrsUcouke" {
     key.type[Group1] = "EIGHT_LEVEL_ALPHABETIC";
     key <AB01> { [           U0467,      U0466,                U0469,    U0468,                U2423,                U23D1, NoSymbol, NoSymbol ] }; // ѧ Ѧ ѩ Ѩ ␣ ⏑
     key <AB02> { [           U0447,      U0427,                U045B,    U040B,   doublelowquotemark,   singlelowquotemark,    UA649,    UA648 ] }; // ч Ч ћ Ћ „ ‚ ꙉ Ꙉ
-    key <AB03> { [           U0441,      U0421,                U0455,    U0405,             NoSymbol,                U2211, NoSymbol, NoSymbol ] }; // с С ѕ Ѕ _ ∑
+    key <AB03> { [           U0441,      U0421,                U046F,    U046E,             NoSymbol,                U2211, NoSymbol, NoSymbol ] }; // с С ѯ Ѯ _ ∑
     key <AB04> { [           U043C,      U041C,                   mu, NoSymbol,  leftdoublequotemark,  leftsinglequotemark,    U200C,    U2217 ] }; // м М µ _ “ ‘ ‌ ∗
     key <AB05> { [           U0438,      U0418,                U0439,    U0419, rightdoublequotemark, rightsinglequotemark, NoSymbol, NoSymbol ] }; // и И й Й ” ’
     key <AB06> { [           U0442,      U0422,                U047F,    U047E,             NoSymbol,             NoSymbol, NoSymbol, NoSymbol ] }; // т Т ѿ Ѿ
@@ -300,7 +300,7 @@ xkb_symbols "sla_CyrlE1" {
     key <AD03> { [           U0435,      U0415,                U0454,    U0404,                U044D,                U042D,    U0465,    U0464 ] }; // е Е є Є э Э ѥ Ѥ
     key <AD04> { [           U0440,      U0420,                U0306,    U0487,            trademark,           registered, NoSymbol, NoSymbol ] }; // р Р ̆ ҇ ™ ®
     key <AD05> { [           U0442,      U0422,                U047F,    U047E,             NoSymbol,             NoSymbol, NoSymbol, NoSymbol ] }; // т Т ѿ Ѿ
-    key <AD06> { [           U0437,      U0417,                U046F,    U046E,                UA641,                UA640,    UA643,    UA642 ] }; // з З ѯ Ѯ ꙁ Ꙁ ꙃ Ꙃ
+    key <AD06> { [           U0437,      U0417,                U0455,    U0405,                UA641,                UA640,    UA643,    UA642 ] }; // з З ѕ Ѕ ꙁ Ꙁ ꙃ Ꙃ
     key <AD07> { [           U046B,      U046A,                U046D,    U046C,           rightarrow,            leftarrow,    U051B,    U051A ] }; // ѫ Ѫ ѭ Ѭ → ← ԛ Ԛ
     key <AD08> { [           U0438,      U0418,                U0439,    U0419,             NoSymbol,             NoSymbol, NoSymbol, NoSymbol ] }; // и И й Й
     key <AD09> { [           U043E,      U041E,                U0461,    U0460,                U047B,                U047A,    U047D,    U047C ] }; // о О ѡ Ѡ ѻ Ѻ ѽ Ѽ
@@ -310,13 +310,13 @@ xkb_symbols "sla_CyrlE1" {
     // THIRD ROW
     key.type[Group1] = "EIGHT_LEVEL_ALPHABETIC";
     key <AC01> { [           U0430,      U0410,                U044F,    U042F,                U0463,                U0462,    UA657,    UA656 ] }; // а А я Я ѣ Ѣ ꙗ Ꙗ
-    key <AC02> { [           U0441,      U0421,                U0455,    U0405,             NoSymbol,                U2211, NoSymbol, NoSymbol ] }; // с С ѕ Ѕ _ ∑
+    key <AC02> { [           U0441,      U0421,                U046F,    U046E,             NoSymbol,                U2211, NoSymbol, NoSymbol ] }; // с С ѯ Ѯ _ ∑
     key <AC03> { [           U0434,      U0414,                U0452,    U0402,             NoSymbol,             NoSymbol, NoSymbol, NoSymbol ] }; // д Д ђ Ђ
     key <AC04> { [           U0444,      U0424,                U0473,    U0472,             NoSymbol,             NoSymbol, NoSymbol, NoSymbol ] }; // ф Ф ѳ Ѳ
     key <AC05> { [           U0436,      U0416,                U045F,    U040F,                U02BF,                U261B,    U02BE,    U261A ] }; // ж Ж џ Џ ʿ ☛ ʾ ☚
     key <AC06> { [           U0433,      U0413,                U0491,    U0490,             NoSymbol,             NoSymbol, NoSymbol, NoSymbol ] }; // г Г ґ Ґ
     key <AC07> { [           U0456,      U0406,                U0458,    U0408,    			   U0457,    			 U0407, NoSymbol, NoSymbol ] }; // і І ј Ј ї Ї
-    key <AC08> { [           U043A,      U041A,             NoSymbol, NoSymbol,             NoSymbol,             NoSymbol, NoSymbol, NoSymbol ] }; // к К
+    key <AC08> { [           U043A,      U041A,                U0481,    U0480,             NoSymbol,             NoSymbol, NoSymbol, NoSymbol ] }; // к К ҁ Ҁ
     key <AC09> { [           U043B,      U041B,                U0459,    U0409,             NoSymbol,             NoSymbol, NoSymbol, NoSymbol ] }; // л Л љ Љ
     key <AC10> { [           U0447,      U0427,                U045B,    U040B,             NoSymbol,             NoSymbol,    UA649,    UA648 ] }; // ч Ч ћ Ћ _ _ ꙉ Ꙉ
     key <AC11> { [           U0467,      U0466,                U0469,    U0468,             NoSymbol,             NoSymbol, NoSymbol, NoSymbol ] }; // ѧ Ѧ ѩ Ѩ
@@ -325,8 +325,8 @@ xkb_symbols "sla_CyrlE1" {
     key.type[Group1] = "EIGHT_LEVEL_ALPHABETIC";
     key <AB01> { [           U0448,      U0428,                U0449,    U0429,                U2423,                U23D1,    U0471,    U0470 ] }; // ш Ш щ Щ ␣ ⏑ ѱ Ѱ
     key <AB02> { [           U0445,      U0425,                U0304, NoSymbol,   doublelowquotemark,   singlelowquotemark, NoSymbol, NoSymbol ] }; // х Х ̄ _ „ ‚
-    key <AB03> { [           U0446,      U0426,                U0481,    U0480,                 cent,            copyright, NoSymbol, NoSymbol ] }; // ц Ц ҁ Ҁ ¢ ©
-    key <AB04> { [           U0432,      U0412,             NoSymbol, NoSymbol,  leftdoublequotemark,  leftsinglequotemark,    U0475,    U0474 ] }; // в В _ _ “ ‘ ѵ Ѵ
+    key <AB03> { [           U0446,      U0426,             NoSymbol, NoSymbol,                 cent,            copyright, NoSymbol, NoSymbol ] }; // ц Ц _ _ ¢ ©
+    key <AB04> { [           U0432,      U0412,                U0475,    U0474,  leftdoublequotemark,  leftsinglequotemark, NoSymbol, NoSymbol ] }; // в В ѵ Ѵ “ ‘
     key <AB05> { [           U0431,      U0411,                U0311,    U0484, rightdoublequotemark, rightsinglequotemark, NoSymbol, NoSymbol ] }; // б Б ̑ ҄ ” ’
     key <AB06> { [           U043D,      U041D,                U045A,    U040A,             NoSymbol,             NoSymbol, NoSymbol, NoSymbol ] }; // н Н њ Њ
     key <AB07> { [           U043C,      U041C,                   mu, NoSymbol,             NoSymbol,             NoSymbol,    U200C,    U2217 ] }; // м М ‌µ _ _ _ ‌ ∗
