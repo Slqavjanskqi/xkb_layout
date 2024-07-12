@@ -1,0 +1,132 @@
+<layout>
+    <configItem>
+        <name>sla</name>
+        <!-- Keyboard indicator for Slavic layouts -->
+        <shortDescription>мс</shortDescription>
+        <description>Слъавьанскъі</description>
+        <countryList>
+            <!-- EAST SLAVIC COUNTRIES -->
+            <iso3166Id>BLR</iso3166Id>
+            <iso3166Id>RUS</iso3166Id>
+            <iso3166Id>UKR</iso3166Id>
+
+            <!-- WEST SLAVIC COUNTRIES -->
+            <iso3166Id>CZE</iso3166Id>
+            <iso3166Id>POL</iso3166Id>
+            <iso3166Id>SVK</iso3166Id>
+
+            <!-- SOUTH SLAVIC COUNTRIES -->
+            <iso3166Id>BGR</iso3166Id>
+            <iso3166Id>BIH</iso3166Id>
+            <iso3166Id>HRV</iso3166Id>
+            <iso3166Id>MKD</iso3166Id>
+            <iso3166Id>SVN</iso3166Id>
+            <iso3166Id>MNE</iso3166Id>
+            <iso3166Id>SRB</iso3166Id>
+
+            <!-- FORMER COUNTRIES -->
+            <iso3166Id>BYS</iso3166Id>
+            <iso3166Id>SCG</iso3166Id>
+            <iso3166Id>SUN</iso3166Id>
+            <iso3166Id>CSK</iso3166Id>
+            <iso3166Id>YUG</iso3166Id>
+        </countryList>
+        <languageList>
+            <iso639Id>sla</iso639Id>
+            <iso639Id>isv</iso639Id>
+
+            <iso639Id>zle</iso639Id>
+            <iso639Id>zls</iso639Id>
+            <iso639Id>zlw</iso639Id>
+
+            <iso639Id>bel</iso639Id>
+            <iso639Id>rus</iso639Id>
+            <iso639Id>rue</iso639Id>
+            <iso639Id>rsk</iso639Id>
+            <iso639Id>ukr</iso639Id>
+            <iso639Id>orv</iso639Id>
+            <!-- Old Novgorodian -->
+
+            <iso639Id>bos</iso639Id>
+            <iso639Id>ckm</iso639Id>
+            <iso639Id>hrv</iso639Id>
+            <iso639Id>cnr</iso639Id>
+            <iso639Id>srp</iso639Id>
+            <iso639Id>svm</iso639Id>
+            <iso639Id>slv</iso639Id>
+            <iso639Id>kjv</iso639Id>
+            <iso639Id>hbs</iso639Id>
+            <iso639Id>hbs</iso639Id>
+            <iso639Id>bul</iso639Id>
+            <iso639Id>chu</iso639Id>
+            <iso639Id>mkd</iso639Id>
+            <!-- <iso639Id>mac</iso639Id> -->
+
+            <iso639Id>dsb</iso639Id>
+            <iso639Id>hsb</iso639Id>
+            <iso639Id>csb</iso639Id>
+            <iso639Id>pol</iso639Id>
+            <iso639Id>szl</iso639Id>
+            <iso639Id>ces</iso639Id>
+            <iso639Id>slk</iso639Id>
+            <iso639Id>pox</iso639Id>
+            <iso639Id>cze</iso639Id>
+            <iso639Id>slo</iso639Id>
+            <iso639Id>wen</iso639Id>
+        </languageList>
+    </configItem>
+    <variantList>
+        <variant>
+            <configItem popularity="standard">
+                <name>sla_CyrsUcouke</name>
+                <shortDescription>sla_CyrsUcouke</shortDescription>
+                <description>(Слъавьанскъі)</description>
+            </configItem>
+        </variant>
+        <variant>
+            <configItem popularity="exotic">
+                <name>sla_GlagUcouke</name>
+                <shortDescription>sla_GlagUcouke</shortDescription>
+                <description>(Ⰳⰾⱏⰰⰳⱁⰾⱐⱜⱌⰰ)</description>
+            </configItem>
+        </variant>
+        <variant>
+            <configItem popularity="standard">
+                <name>sla_LatnE1</name>
+                <shortDescription>sla_LatnE1</shortDescription>
+                <description>(Latinica E1)</description>
+                <countryList>
+                    <!-- THIRD COUNTRIES -->
+                    <iso3166Id>MNG</iso3166Id>
+                    <iso3166Id>KAZ</iso3166Id>
+                    <iso3166Id>FIN</iso3166Id>
+                    <iso3166Id>EST</iso3166Id>
+                    <iso3166Id>LVA</iso3166Id>
+                    <iso3166Id>LTU</iso3166Id>
+                    <iso3166Id>MDA</iso3166Id>
+                    <iso3166Id>ROU</iso3166Id>
+                    <iso3166Id>HUN</iso3166Id>
+                    <iso3166Id>DEU</iso3166Id>
+                    <iso3166Id>ALB</iso3166Id>
+                    <iso3166Id>XXK</iso3166Id>
+                    <iso3166Id>PMR</iso3166Id>
+                    <iso3166Id>AUT</iso3166Id>
+                </countryList>
+            </configItem>
+        </variant>
+        <variant>
+            <configItem popularity="exotic">
+                <name>sla_CyrlE1</name>
+                <shortDescription>sla_CyrlE1</shortDescription>
+                <description>(Кьірьіліца Е1)</description>
+            </configItem>
+        </variant>
+        <variant>
+            <configItem popularity="exotic">
+                <name>sla_GlagE1</name>
+                <shortDescription>sla_GlagE1</shortDescription>
+                <description>(Ⰽⱐⱜⱃⱜⰾⰾⱁⰲⱐⱜⱌⰰ Ⰵⰰ҃)</description>
+            </configItem>
+        </variant>
+    </variantList>
+</layout>

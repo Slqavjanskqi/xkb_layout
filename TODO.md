@@ -11,8 +11,3 @@
 	    - [x] Russian UCOUKEN Keyboard Layout (sla_GlagUcouke)
 	- [ ] Latin Script
 	    - [x] European E1 Keyboard Layout (sla_LatnE1)
-
-- [x] Python installer
-	- [x] backup old XMLs while installation
-	- [ ] create XMLsBackup if not present
-

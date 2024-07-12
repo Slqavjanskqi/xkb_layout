@@ -1,0 +1,15 @@
+[package]
+name = "xkb_layout"
+version = "0.1.0"
+authors = ["Korcakov, Roman"]
+edition = "2021"
+rust-version = "1.71.0"
+description = "Linux targeted installer of the Modern Slavonic Keyboard Layout for the X Keyboard Extension"
+license = "MIT"
+publish = false
+
+[dependencies]
+os-release = "0.1.0"
+# xkeyboard-config = {version = "2.42-1", optional = false}
+# https://gitlab.freedesktop.org/xkeyboard-config/xkeyboard-config
+# xkbcommon = { version = "0.7", features = ["wayland"] }
