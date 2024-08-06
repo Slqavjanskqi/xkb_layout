@@ -6,7 +6,7 @@ use os_release::OsRelease;
 
 /*
 ---------------------------
-Modern Slavonic Installer Program
+Slavonic Slqavjanskqi keyboard installer
 ---------------------------
 Purpose:
 - back up system base.xml and evdev.xml xkb-rule-files
@@ -317,7 +317,7 @@ fn main() {
             // remove temp working file
             fs::remove_file(temp_str_ref_temp_xml_file).expect("issue, while deleting temp.xml file");
 
-            println!("Installation of Modern Slavonic Successfully!");
+            println!("Installation of Slavonic Slqavjanskqi layout successfully!");
         }
 
         "windows" => {
