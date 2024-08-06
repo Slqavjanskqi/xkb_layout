@@ -1,7 +1,7 @@
 // LINUX XKB LAYOUT FILE
-// SLQAWYANSKQIE (MODERN SLAVIC LAYOUT)
-// 2018-07-14 © Кърчьаковъ, Ръаманъ П.
-// Currect Version: 3.6.3
+// SLQVJANSKQI (MODERN SLAVONIC LAYOUT)
+// 2018-07-14 © Korcakov, Roman
+// Currect Version: 3.6.4
 
 // The different layers and how to reach them
 // --------------------------------------------------------------
@@ -222,7 +222,7 @@ xkb_symbols "sla_GlagUcouke" {
 partial alphanumeric_keys
 xkb_symbols "sla_LatnE1" {
   include "de(e1)"
-    ///////////////////////// Medzhueslqawyanskqie (Latinica E1) /////////////////////////
+    ///////////////////////// Medzhueslqavjanskqi (Latinica E1) /////////////////////////
     name[Group1]= "(Latinica E1)";
     // EUROPEAN LAYOUT LATIN
 
