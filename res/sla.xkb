@@ -1,18 +1,18 @@
 // LINUX XKB LAYOUT FILE
 // SLQVJANSKQI (SLAVONIC LAYOUT)
 // 2018-07-14 © Korcakov, Roman
-// Currect Version: 3.6.4
+// Currect Version: 3.6.7
 
 // The different layers and how to reach them
 // --------------------------------------------------------------
 // Level 1: Base
-// Level 2: Shift                             // Caps
-// Level 3: rAlt + Base                       // rAlt + Caps
-// Level 4: rAlt + Shift + Base
-// Level 5: Level_5_Mod + Base                // rAlt + Shift + Caps
-// Level 6: Level_5_Mod + Shift + Base
-// Level 7: Level_5_Mod + rAlt + Shift + Base
-// Level 8: Level_5_Mod + rAlt + Shift + Base
+// Level 2: Base + Shift                    // Caps
+// Level 3: Base + rAlt                     // rAlt + Caps
+// Level 4: Base + rAlt + Shift
+// Level 5: Base + Level_5_Mod              // rAlt + Shift + Caps
+// Level 6: Base + Level_5_Mod + Shift
+// Level 7: Base + Level_5_Mod + rAlt
+// Level 8: Base + Level_5_Mod + rAlt + Shift
 
 
 // SLA_BASE
