@@ -1,7 +1,7 @@
 # xkb_layout
 Set of PC-keyboard (ISO-105) layouts for the Slavonic language
 
-<img src="/img/slo_CYRS.png"
+<img src="/img/slo_CyrlE1.png"
       alt="closeup"
       width="800"/>
       
