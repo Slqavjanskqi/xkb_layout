@@ -28,9 +28,9 @@ fn main() {
         "linux" => {
             // set string reference to local source files
             let res_str_ref_xkb_file = "res".to_owned()
-                + MAIN_SEPARATOR_STR + "sla.xkb";
+                + MAIN_SEPARATOR_STR + "slo.xkb";
             let res_str_ref_xml_layout_file = "res".to_owned()
-                + MAIN_SEPARATOR_STR + "sla_layout.xml";
+                + MAIN_SEPARATOR_STR + "slo_layout.xml";
             let res_str_ref_evdev_xml_file = "res".to_owned()
                 + MAIN_SEPARATOR_STR + "evdev.xml";
 
@@ -45,14 +45,14 @@ fn main() {
             let temp_str_ref_temp_xml_file = "temp.xml".to_owned();
 
             // set path reference to local source files
-            let path_sla_xkb = Path::new(&res_str_ref_xkb_file);
-            let path_sla_xml = Path::new(&res_str_ref_xml_layout_file);
+            let path_slo_xkb = Path::new(&res_str_ref_xkb_file);
+            let path_slo_xml = Path::new(&res_str_ref_xml_layout_file);
 
-            if path_sla_xkb.exists() == false {
+            if path_slo_xkb.exists() == false {
                 println!("installation corrupted, missing xkb file, aborting");
                 return;
             }
-            if path_sla_xml.exists() == false {
+            if path_slo_xml.exists() == false {
                 println!("installation corrupted, missing xml file, aborting");
                 return;
             }
@@ -110,11 +110,11 @@ fn main() {
             }
 
             // set system target xkb file reference
-            sys_str_ref_xkb_file = sys_str_ref_symbols_folder.to_owned() + MAIN_SEPARATOR_STR + "sla";
+            sys_str_ref_xkb_file = sys_str_ref_symbols_folder.to_owned() + MAIN_SEPARATOR_STR + "slo";
 
             // set system files paths
             let path_sys_symbols_folder = Path::new(&sys_str_ref_symbols_folder);
-            let path_sys_sla_file = Path::new(&sys_str_ref_xkb_file);
+            let path_sys_slo_file = Path::new(&sys_str_ref_xkb_file);
             let path_sys_base_xml = Path::new(&sys_str_ref_base_xml_file);
             let path_sys_evdev_xml = Path::new(&sys_str_ref_evdev_xml_file);
 
@@ -175,7 +175,7 @@ fn main() {
             */
 
             // check previous installation footprint
-            if (path_sys_sla_file.exists()) {
+            if (path_sys_slo_file.exists()) {
                 println!("detected previous installation");
                 println!("please approve the remove of {}", sys_str_ref_xkb_file);
                 let command_clean_xkb = format!("sudo rm -i {}", sys_str_ref_xkb_file);
@@ -215,8 +215,8 @@ fn main() {
                 .expect("issue reading system base.xml");
             let str_evdev_xml = fs::read_to_string(path_sys_evdev_xml)
                 .expect("issue reading system evdev.xml");
-            let str_sla_xml = fs::read_to_string(path_sla_xml)
-                .expect("issue reading local sla_layout.xml file");
+            let str_slo_xml = fs::read_to_string(path_slo_xml)
+                .expect("issue reading local slo_layout.xml file");
 
             // make system xml files parsable
             let ref_str_base_xml = str_base_xml.as_str();
@@ -226,7 +226,7 @@ fn main() {
             let mut temp_str_base_xml = String::new();
 
             // check layout footprint
-            if (str_base_xml.contains(">sla<")) {
+            if (str_base_xml.contains(">slo<")) {
                 // if layout exist, skip copying it into the temp_file
                 let mut start_str_index = 0;
 
@@ -237,7 +237,7 @@ fn main() {
                     // read until the end of layout block
                     if let Some(layout_end_tag_index) = ref_str_base_xml[(start_str_index + layout_start_tag_index)..].find("</layout>") {
                         let layout_content = &ref_str_base_xml[((start_str_index + layout_start_tag_index) + 8)..(start_str_index + layout_start_tag_index + layout_end_tag_index)];
-                        if (layout_content.contains(">sla<") == false) {
+                        if (layout_content.contains(">slo<") == false) {
                             temp_str_base_xml.push_str("<layout>");
                             temp_str_base_xml.push_str(layout_content);
                             temp_str_base_xml.push_str("</layout>");
@@ -265,7 +265,7 @@ fn main() {
             // split the temp-xml-file-string right before the first layout
             // and add target xml layout in between the split string
             let (part1_str_base_xml, part2_str_base_xml) = temp_str_base_xml.split_at(temp_str_base_xml.find("<layout>").unwrap());
-            let str_new_base_xml = part1_str_base_xml.to_owned() + str_sla_xml.as_str() + part2_str_base_xml;
+            let str_new_base_xml = part1_str_base_xml.to_owned() + str_slo_xml.as_str() + part2_str_base_xml;
             // write modified string into the temp-working-xml-file
             fs::write(Path::new(&temp_str_ref_temp_xml_file.clone()), str_new_base_xml.to_owned())
                 .expect("issue writing temporary xml file");

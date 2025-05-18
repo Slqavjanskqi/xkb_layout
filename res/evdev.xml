@@ -4,7 +4,7 @@
 
   <layout>
     <configItem>
-      <name>sla</name>
+      <name>slo</name>
       <!-- Keyboard indicator for Slavic layouts -->
       <shortDescription>мс</shortDescription>
       <description>Слъавьанскъі</description>
@@ -36,7 +36,7 @@
         <iso3166Id>YUG</iso3166Id>
       </countryList>
       <languageList>
-        <iso639Id>sla</iso639Id>
+<!--         <iso639Id>sla</iso639Id> -->
         <iso639Id>isv</iso639Id>
 
         <iso639Id>zle</iso639Id>
@@ -81,24 +81,17 @@
     </configItem>
     <variantList>
       <variant>
-        <configItem popularity="standard">
-          <name>sla_CyrsUcouke</name>
-          <shortDescription>sla_CyrsUcouke</shortDescription>
-          <description>(Слъавьанскъі)</description>
-        </configItem>
-      </variant>
-      <variant>
         <configItem popularity="exotic">
-          <name>sla_GlagUcouke</name>
-          <shortDescription>sla_GlagUcouke</shortDescription>
-          <description>(Ⰳⰾⱏⰰⰳⱁⰾⱐⱜⱌⰰ)</description>
+          <name>slo_GlagUcouke</name>
+          <shortDescription>slo_GlagUcouke</shortDescription>
+          <description>Ⱄⰾⱏⰰⰲⱐⰰⱀⱄⰽⱏⱜ (Ⰳⰾⱏⰰⰳⱁⰾⱐⱜⱌⰰ)</description>
         </configItem>
       </variant>
       <variant>
         <configItem popularity="standard">
-          <name>sla_LatnE1</name>
-          <shortDescription>sla_LatnE1</shortDescription>
-          <description>(Latinica E1)</description>
+          <name>slo_LatnE1</name>
+          <shortDescription>slo_LatnE1</shortDescription>
+          <description>Medzhueslqavjanskqi (Latinica E1)</description>
           <countryList>
             <!-- THIRD COUNTRIES -->
             <iso3166Id>MNG</iso3166Id>
@@ -120,16 +113,16 @@
       </variant>
       <variant>
         <configItem popularity="exotic">
-          <name>sla_CyrlE1</name>
-          <shortDescription>sla_CyrlE1</shortDescription>
-          <description>(Кьірьіліца Е1)</description>
+          <name>slo_CyrlE1</name>
+          <shortDescription>slo_CyrlE1</shortDescription>
+          <description>Меджуслъавьанскъі (Кьірьіліца Е1)</description>
         </configItem>
       </variant>
       <variant>
         <configItem popularity="exotic">
-          <name>sla_GlagE1</name>
-          <shortDescription>sla_GlagE1</shortDescription>
-          <description>(Ⰽⱐⱜⱃⱜⰾⰾⱁⰲⱐⱜⱌⰰ Ⰵⰰ҃)</description>
+          <name>slo_GlagE1</name>
+          <shortDescription>slo_GlagE1</shortDescription>
+          <description>Ⱄⰾⱏⰰⰲⱐⰰⱀⱄⰽⱏⱜ (Ⰽⱐⱜⱃⱜⰾⰾⱁⰲⱐⱜⱌⰰ Ⰵⰰ҃)</description>
         </configItem>
       </variant>
     </variantList>

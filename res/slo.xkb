@@ -1,7 +1,7 @@
 // LINUX XKB LAYOUT FILE
 // SLQVJANSKQI (SLAVONIC LAYOUT)
 // 2018-07-14 © Korcakov, Roman
-// Currect Version: 3.6.7
+// Currect Version: 3.6.8
 
 // The different layers and how to reach them
 // --------------------------------------------------------------
@@ -15,7 +15,7 @@
 // Level 8: Base + Level_5_Mod + rAlt + Shift
 
 
-// SLA_BASE
+// SLO_BASE
 // ┌─────────┬─────────┬─────────┬─────────┬─────────┬─────────┬─────────┬─────────┬─────────┬─────────┬─────────┬─────────┬─────────┲━━━━━━━━━━━┓
 // │ ° ̂ _  ҃ │ !   ◊   │ "   ¦ ꙰  │ §   ¶ ꙲  │ $  ℳ ₴ │ % € ₰   │ &   ⁊   │ / ÷ №   │ ( ∞ ⟪   │ )   ⟫   │ =   ∅   │ ?    ¬  │ ̀ ̧ ͜  ̏ ┃ ⌫         ┃
 // │ ^ × ̈ ҂ │ 1 ’ ¼ ҈ │ 2 ² ½ ҉ │ 3 ³ ¾ ꙱  │ 4 — ¤ ₽ │ 5 ¡ ‰ ¥ │ 6 ¿ ⁄    │ 7 { ⌀   │ 8 [ ⟨   │ 9 ] ⟩   │ 0 } ÷   │--- \ ≠  │ ́ ̇ £ ̋ ┃ Backspace ┃
@@ -34,7 +34,7 @@
 // ┗━━━━━━━━━━━┻━━━━━━━━━━┻━━━━━━━━━━━┹─────────────────────────────────────────────────────────┺━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━┻━━━━━━━━━━━━━━┛
 
 partial alphanumeric_keys
-xkb_symbols "sla_base" {
+xkb_symbols "slo_base" {
     // E1-EUROPEAN LAYOUT BASE
 
     // FIRST ROW
@@ -121,13 +121,13 @@ xkb_symbols "sla_base" {
 };
 
 
-// SLA_CYRSUCOUKE
+// SLO_CYRSUCOUKE
 default partial alphanumeric_keys
-xkb_symbols "sla_CyrsUcouke" {
-  include "sla(sla_base)"
-    // sla_CYRS / sla_CYRL
+xkb_symbols "basic" {
+  include "slo(slo_base)"
+    // slo_CYRS / slo_CYRL / slo_CyrsUcouke
     ///////////////////////// Слъавьанскъі /////////////////////////
-    name[Group1]= "(Слъавьанскъі)";
+    name[Group1]= "Слъавьанскъі";
     // EAST-EUROPEAN LAYOUT
 
     // SECOND ROW
@@ -170,12 +170,12 @@ xkb_symbols "sla_CyrsUcouke" {
 };
 
 
-// SLA_GLAGUCOUKE
+// SLO_GLAGUCOUKE
 partial alphanumeric_keys
-xkb_symbols "sla_GlagUcouke" {
-  include "sla(sla_base)"
+xkb_symbols "slo_GlagUcouke" {
+  include "slo(slo_base)"
     ///////////////////////// Ⱄⰾⱏⰰⰲⱐⰰⱀⱄⰽⱏⱜ (Ⰳⰾⱏⰰⰳⱁⰾⱐⱜⱌⰰ) /////////////////////////
-    name[Group1]= "(Ⰳⰾⱏⰰⰳⱁⰾⱐⱜⱌⰰ)";
+    name[Group1]= "Ⱄⰾⱏⰰⰲⱐⰰⱀⱄⰽⱏⱜ (Ⰳⰾⱏⰰⰳⱁⰾⱐⱜⱌⰰ)";
     // EAST-EUROPEAN LAYOUT GLAGOLICA
 
     // SECOND ROW
@@ -218,12 +218,12 @@ xkb_symbols "sla_GlagUcouke" {
 };
 
 
-// SLA_LATNE1
+// SLO_LATNE1
 partial alphanumeric_keys
-xkb_symbols "sla_LatnE1" {
+xkb_symbols "slo_LatnE1" {
   include "de(e1)"
     ///////////////////////// Medzhueslqavjanskqi (Latinica E1) /////////////////////////
-    name[Group1]= "(Latinica E1)";
+    name[Group1]= "Medzhueslqavjanskqi (Latinica E1)";
     // EUROPEAN LAYOUT LATIN
 
     key <AE11> { [   question, NoSymbol,     backslash, NoSymbol, notequal,     U00AC, NoSymbol, NoSymbol ] }; //
@@ -234,12 +234,12 @@ xkb_symbols "sla_LatnE1" {
 };
 
 
-// SLA_CYRLE1
+// SLO_CYRLE1
 partial alphanumeric_keys
-xkb_symbols "sla_CyrlE1" {
-  include "sla(sla_base)"
+xkb_symbols "slo_CyrlE1" {
+  include "slo(slo_base)"
     ///////////////////////// Меджуслъавьанскъі (Кьірьіліца Е1) /////////////////////////
-    name[Group1]= "(Кьірьіліца Е1)";
+    name[Group1]= "Меджуслъавьанскъі (Кьірьіліца Е1)";
     // WEST-EUROPEAN LAYOUT
 
     // SECOND ROW
@@ -282,12 +282,12 @@ xkb_symbols "sla_CyrlE1" {
 };
 
 
-// SLA_GLAGE1
+// SLO_GLAGE1
 partial alphanumeric_keys
-xkb_symbols "sla_GlagE1" {
-  include "sla(sla_base)"
+xkb_symbols "slo_GlagE1" {
+  include "slo(slo_base)"
     ///////////////////////// Ⱄⰾⱏⰰⰲⱐⰰⱀⱄⰽⱏⱜ (Ⰽⱐⱜⱃⱜⰾⰾⱁⰲⱐⱜⱌⰰ Ⰵⰰ҃) /////////////////////////
-    name[Group1]= "(Ⰽⱛⱃⰺⰾⰾⱁⰲⰺⱌⰰ Ⰵⰰ҃)";
+    name[Group1]= "Ⱄⰾⱏⰰⰲⱐⰰⱀⱄⰽⱏⱜ (Ⰽⱛⱃⰺⰾⰾⱁⰲⰺⱌⰰ Ⰵⰰ҃)";
     // WEST-EUROPEAN LAYOUT GLAGOLICA
 
     // SECOND ROW
@@ -329,4 +329,4 @@ xkb_symbols "sla_GlagE1" {
     key <AB07> { [           U2C3F,      U2C0F,                U2C5E,    U2C2E,             NoSymbol,             NoSymbol,    U200C,    U2217 ] }; // ⰿ Ⰿ ⱞ Ⱞ _ _ ‌ ∗
 };
 
-// todo SLA_BGBDS
+// todo SLO_BGBDS
