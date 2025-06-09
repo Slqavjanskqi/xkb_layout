@@ -5,12 +5,25 @@
 - remapped glagolitic stop and i,y & j variants
 - changed versioning to release.patch.fix shemata
 
+3.7.8 - 2025-05-19
+- updated klc based on xkb version
+
 3.6.8 - 2025-05-18
 - major refactoring
 - updated screenshots
 
+3.6.6 - 2024-08-17
+- update klc layout to v.3.6.6
+- added third and fourth row
+- added some minor changes and sections
+
+3.6.5 - 2024-08-15
+- update klc layout to v.3.6.5
+- intoducement of 8 iso klc lavel layers
+
 3.6.4 - 2024-08-06
 - minor project renaming of inconsistent naming
+- update klc layout to v.3.6.1 at https://github.com/Slqavjanskqi/klc_layout/
 
 3.6.3 - 2024-07-12
 - major structuring of xkb file and xml ruleset
