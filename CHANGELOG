@@ -143,3 +143,6 @@
 - create cyrillic layout, based on russian
 - init windows layout-file
 - init latin linux layout-file
+
+0.0 - 2018-05-12
+- blank project init
