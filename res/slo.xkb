@@ -1,7 +1,7 @@
 // LINUX XKB LAYOUT FILE
 // SLQVJANSKQI (SLAVONIC LAYOUT)
-// 2018-07-14 © Korcakov, Roman
-// Currect Version: 3.6.8
+// 2018-06-12 © Korcakov, Roman
+// Currect Version: 4.0.116
 
 // The different layers and how to reach them
 // --------------------------------------------------------------
@@ -55,7 +55,7 @@ xkb_symbols "slo_base" {
 
     // SECOND ROW
     key.type[Group1] = "EIGHT_LEVEL_ALPHABETIC";
-//    key  <TAB> { [ Tab,    ISO_Left_Tab,             Multi_key,      ISO_Level5_Lock,         NoSymbol,     NoSymbol,       NoSymbol,       ISO_Level5_Lock     ] };
+    // key  <TAB> { [ Tab,    ISO_Left_Tab,             Multi_key,      ISO_Level5_Lock,         NoSymbol,     NoSymbol,       NoSymbol,       ISO_Level5_Lock     ] };
     key <AD01> { [        NoSymbol,   NoSymbol,             NoSymbol, NoSymbol,             NoSymbol,             NoSymbol, NoSymbol, NoSymbol ] };
     key <AD02> { [        NoSymbol,   NoSymbol,             NoSymbol, NoSymbol,             NoSymbol,             NoSymbol, NoSymbol, NoSymbol ] };
     key <AD03> { [        NoSymbol,   NoSymbol,             NoSymbol, NoSymbol,             NoSymbol,             NoSymbol, NoSymbol, NoSymbol ] };
@@ -109,9 +109,9 @@ xkb_symbols "slo_base" {
     key.type[Group1] = "TWO_LEVEL";
     key <RTSH>	{[ Shift_R, Caps_Lock ]};
 
-//    key.type[Group1] = "ONE_LEVEL";
-//    key <LFSH>	{[ Shift_L ]}; // DO NOT USE, else ALT+SHIFT wont change Keyboard-Layout
-//    key <RALT>	{[ ISO_Level3_Shift ]};
+    // key.type[Group1] = "ONE_LEVEL";
+    // key <LFSH>	{[ Shift_L ]}; // DO NOT USE, else ALT+SHIFT wont change Keyboard-Layout
+    // key <RALT>	{[ ISO_Level3_Shift ]};
 
     // KEY <LSGT> OF THE 105-KEYS KEYBOARD
     key.type[Group1] = "EIGHT_LEVEL";
@@ -148,10 +148,10 @@ xkb_symbols "basic" {
     key.type[Group1] = "EIGHT_LEVEL_ALPHABETIC";
     key <AC01> { [           U0444,      U0424,                U0473,    U0472,             NoSymbol,             NoSymbol, NoSymbol, NoSymbol ] }; // ф Ф ѳ Ѳ
     key <AC02> { [           U044B,      U042B,                UA651,    UA650,             NoSymbol,             NoSymbol, NoSymbol, NoSymbol ] }; // ы Ы ꙑ Ꙑ
-    key <AC03> { [           U0432,      U0412,                U0475,    U0474,             NoSymbol,             NoSymbol, NoSymbol, NoSymbol ] }; // в В ѵ Ѵ _ _ _ _
+    key <AC03> { [           U0432,      U0412,                U045E,    U040E,             NoSymbol,             NoSymbol,    U0477,    U0476 ] }; // в В ў Ў _ _ ѷ Ѷ
     key <AC04> { [           U0430,      U0410,                U044F,    U042F,                U0463,                U0462,    UA657,    UA656 ] }; // а А я Я ѣ Ѣ ꙗ Ꙗ
     key <AC05> { [           U043F,      U041F,                U0486,    U0485,                U02BF,                U261B,    U02BE,    U261A ] }; // п П ҆ ҅ ʿ ☛ ʾ ☚
-    key <AC06> { [           U0440,      U0420,                U0306,    U0487,            trademark,           registered, NoSymbol, NoSymbol ] }; // р Р ̆ ҇ ™ ®
+    key <AC06> { [           U0440,      U0420,                U0306,    U0487,            trademark,           registered, NoSymbol, NoSymbol ] }; // р Р ̆  ҇ ™ ®
     key <AC07> { [           U043E,      U041E,                U0461,    U0460,                U047B,                U047A,    U047D,    U047C ] }; // о О ѡ Ѡ ѻ Ѻ ѽ Ѽ
     key <AC08> { [           U043B,      U041B,                U0459,    U0409,             NoSymbol,             NoSymbol, NoSymbol, NoSymbol ] }; // л Л љ Љ
     key <AC09> { [           U0434,      U0414,                U0452,    U0402,             NoSymbol,             NoSymbol, NoSymbol, NoSymbol ] }; // д Д ђ Ђ
@@ -164,9 +164,9 @@ xkb_symbols "basic" {
     key <AB02> { [           U0447,      U0427,                U045B,    U040B,   doublelowquotemark,   singlelowquotemark,    UA649,    UA648 ] }; // ч Ч ћ Ћ „ ‚ ꙉ Ꙉ
     key <AB03> { [           U0441,      U0421,                U046F,    U046E,             NoSymbol,                U2211, NoSymbol, NoSymbol ] }; // с С ѯ Ѯ _ ∑
     key <AB04> { [           U043C,      U041C,                   mu, NoSymbol,  leftdoublequotemark,  leftsinglequotemark,    U200C,    U2217 ] }; // м М µ _ “ ‘ ‌ ∗
-    key <AB05> { [           U0438,      U0418,                U0439,    U0419, rightdoublequotemark, rightsinglequotemark, NoSymbol, NoSymbol ] }; // и И й Й ” ’
+    key <AB05> { [           U0438,      U0418,                U0439,    U0419, rightdoublequotemark, rightsinglequotemark,    U0475,    U0474 ] }; // и И й Й ” ’ ѵ Ѵ
     key <AB06> { [           U0442,      U0422,                U047F,    U047E,             NoSymbol,             NoSymbol, NoSymbol, NoSymbol ] }; // т Т ѿ Ѿ
-    key <AB07> { [           U0431,      U0411,                U0311,    U0484,             NoSymbol,             NoSymbol, NoSymbol, NoSymbol ] }; // б Б ̑ ҄
+    key <AB07> { [           U0431,      U0411,                U0311,    U0484,             NoSymbol,             NoSymbol, NoSymbol, NoSymbol ] }; // б Б ̑  ҄
 };
 
 
@@ -181,40 +181,40 @@ xkb_symbols "slo_GlagUcouke" {
     // SECOND ROW
     key.type[Group1] = "EIGHT_LEVEL_ALPHABETIC";
     key <AD01> { [           U2C56,      U2C26,                U2C59,    U2C29,                   at,             NoSymbol, NoSymbol, NoSymbol ] }; // ⱖ Ⱖ ⱙ Ⱙ @
-    key <AD02> { [           U2C4C,      U2C1C,             NoSymbol, NoSymbol,                 cent,            copyright, NoSymbol, NoSymbol ] }; // ⱌ Ⱌ  _ _ ¢ ©
-    key <AD03> { [           U2C46,      U2C16,                U2C58,    U2C28,             NoSymbol,             NoSymbol, NoSymbol, NoSymbol ] }; // ⱆ Ⱆ ⱘ Ⱘ
+    key <AD02> { [           U2C4C,      U2C1C,             NoSymbol, NoSymbol,                 cent,            copyright, NoSymbol, NoSymbol ] }; // ⱌ Ⱌ _ _ ¢ ©
+    key <AD03> { [           U2C53,      U2C23,                U2C58,    U2C28,                U2C46,                U2C16, NoSymbol, NoSymbol ] }; // ⱓ Ⱓ ⱘ Ⱘ ⱆ Ⱆ
     key <AD04> { [           U2C3D,      U2C0D,             NoSymbol, NoSymbol,             NoSymbol,             NoSymbol, NoSymbol, NoSymbol ] }; // ⰽ Ⰽ
-    key <AD05> { [           U2C35,      U2C05,                U2C57,    U2C27,             NoSymbol,             NoSymbol, NoSymbol, NoSymbol ] }; // ⰵ Ⰵ ⱗ Ⱗ
+    key <AD05> { [           U2C35,      U2C05,                U2C57,    U2C27,                U2C5D,                U2C2D, NoSymbol, NoSymbol ] }; // ⰵ Ⰵ ⱗ Ⱗ ⱝ Ⱝ
     key <AD06> { [           U2C40,      U2C10,             NoSymbol, NoSymbol,             NoSymbol,             NoSymbol, NoSymbol, NoSymbol ] }; // ⱀ Ⱀ
     key <AD07> { [           U2C48,      U2C18,                U2C33,    U2C03,           rightarrow,            leftarrow, NoSymbol, NoSymbol ] }; // ⱈ Ⱈ ⰳ Ⰳ _ _ → ←
     key <AD08> { [           U2C4E,      U2C1E,                U2C4B,    U2C1B,             NoSymbol,             NoSymbol, NoSymbol, NoSymbol ] }; // ⱎ Ⱎ ⱋ Ⱋ
-    key <AD09> { [           U2C5C,      U2C2C,                U2C54,    U2C24,                U2C39,                U2C09, NoSymbol, NoSymbol ] }; // ⱜ Ⱜ ⱔ Ⱔ  ⰹ Ⰹ
+    key <AD09> { [           U2C3B,      U2C0B,                U2C5B,    U2C2B,                U2C39,                U2C09, NoSymbol, NoSymbol ] }; // ⰻ Ⰻ ⱛ Ⱛ ⰹ Ⰹ
     key <AD10> { [           U2C38,      U2C08,                U2C37,    U2C07,            downarrow,              uparrow, NoSymbol, NoSymbol ] }; // ⰸ Ⰸ ⰷ Ⰷ _ _ ↓ ↑
     key <AD11> { [           U2C52,      U2C22,                U0304, NoSymbol,                U2198,                U2197,    U2196,    U2199 ] }; // ⱒ Ⱒ  ̄ ↘ ↗ ↖ ↙
 
     // THIRD ROW
     key.type[Group1] = "EIGHT_LEVEL_ALPHABETIC";
     key <AC01> { [           U2C47,      U2C17,                U2C5A,    U2C2A,             NoSymbol,             NoSymbol, NoSymbol, NoSymbol ] }; // ⱇ Ⱇ ⱚ Ⱚ
-    key <AC02> { [           U2C3A,      U2C0A,             NoSymbol, NoSymbol,             NoSymbol,             NoSymbol, NoSymbol, NoSymbol ] }; // ⰺ Ⰺ
-    key <AC03> { [           U2C32,      U2C02,             NoSymbol, NoSymbol,             NoSymbol,             NoSymbol,    U2C5B,    U2C2B ] }; // ⰲ Ⰲ _ _ _ _ ⱛ Ⱛ
-    key <AC04> { [           U2C30,      U2C00,                U2C5D,    U2C2D,                U2C51,                U2C21, NoSymbol, NoSymbol ] }; // ⰰ Ⰰ ⱝ Ⱝ ⱑ Ⱑ
-    key <AC05> { [           U2C42,      U2C12,                U0486,    U0485,                U02BF,                U261B,    U02BE,    U261A ] }; // ⱂ Ⱂ ҆ ҅ ʿ ☛ ʾ ☚
-    key <AC06> { [           U2C43,      U2C13,                U0306,    U0487,            trademark,           registered, NoSymbol, NoSymbol ] }; // ⱃ Ⱃ ̆ ҇ ™ ®
+    key <AC02> { [           U2C3A,      U2C0A,                U2C39,    U2C09,             NoSymbol,             NoSymbol, NoSymbol, NoSymbol ] }; // ⰺ Ⰺ ⰹ Ⰹ
+    key <AC03> { [           U2C32,      U2C02,             NoSymbol, NoSymbol,             NoSymbol,             NoSymbol, NoSymbol, NoSymbol ] }; // ⰲ Ⰲ
+    key <AC04> { [           U2C30,      U2C00,                U2C5C,    U2C2C,                U2C51,                U2C21, NoSymbol, NoSymbol ] }; // ⰰ Ⰰ ⱜ Ⱜ ⱑ Ⱑ
+    key <AC05> { [           U2C42,      U2C12,                U0486,    U0485,                U02BF,                U261B,    U02BE,    U261A ] }; // ⱂ Ⱂ ҆  ҅  ʿ ☛ ʾ ☚
+    key <AC06> { [           U2C43,      U2C13,                U0306,    U0487,            trademark,           registered, NoSymbol, NoSymbol ] }; // ⱃ Ⱃ ̆  ҇ ™ ®
     key <AC07> { [           U2C41,      U2C11,                U2C49,    U2C19,             NoSymbol,             NoSymbol, NoSymbol, NoSymbol ] }; // ⱁ Ⱁ ⱉ Ⱉ
     key <AC08> { [           U2C3E,      U2C0E,             NoSymbol, NoSymbol,             NoSymbol,             NoSymbol, NoSymbol, NoSymbol ] }; // ⰾ Ⰾ
     key <AC09> { [           U2C34,      U2C04,                U2C3C,    U2C0C,             NoSymbol,             NoSymbol, NoSymbol, NoSymbol ] }; // ⰴ Ⰴ ⰼ Ⰼ
     key <AC10> { [           U2C36,      U2C06,             NoSymbol, NoSymbol,             NoSymbol,             NoSymbol, NoSymbol, NoSymbol ] }; // ⰶ Ⰶ
-    key <AC11> { [           U2C4F,      U2C1F,                U2C50,    U2C20,                U2C53,                U2C23, NoSymbol, NoSymbol ] }; // ⱏ Ⱏ ⱐ Ⱐ ⱓ Ⱓ
+    key <AC11> { [           U2C4F,      U2C1F,                U2C50,    U2C20,             NoSymbol,             NoSymbol, NoSymbol, NoSymbol ] }; // ⱏ Ⱏ ⱐ Ⱐ
 
     // FOURTH ROW
     key.type[Group1] = "EIGHT_LEVEL_ALPHABETIC";
     key <AB01> { [           U2C54,      U2C24,                U2C55,    U2C25,                U2423,                U23D1, NoSymbol, NoSymbol ] }; // ⱔ Ⱔ ⱕ Ⱕ ␣ ⏑
     key <AB02> { [           U2C4D,      U2C1D,             NoSymbol, NoSymbol,   doublelowquotemark,   singlelowquotemark, NoSymbol, NoSymbol ] }; // ⱍ Ⱍ „ ‚
     key <AB03> { [           U2C44,      U2C14,             NoSymbol, NoSymbol,             NoSymbol,                U2211, NoSymbol, NoSymbol ] }; // ⱄ Ⱄ _ _ _ ∑
-    key <AB04> { [           U2C3F,      U2C0F,                U2C5E,    U2C2E,  leftdoublequotemark,  leftsinglequotemark,    U200C,    U2217 ] }; // ⰿ Ⰿ ⱞ Ⱞ “ ‘ ‌ ∗
-    key <AB05> { [           U2C3B,      U2C0B,                U2C3A,    U2C0A, rightdoublequotemark, rightsinglequotemark, NoSymbol, NoSymbol ] }; // ⰻ Ⰻ ⰺ Ⰺ ” ’
+    key <AB04> { [           U2C3F,      U2C0F,                U2C5E,    U2C2E,  leftdoublequotemark,  leftsinglequotemark,    U200C,    U2217 ] }; // ⰿ Ⰿ ⱞ Ⱞ “ ‘ ‌∗
+    key <AB05> { [           U2C3A,      U2C0A,                U2C39,    U2C09, rightdoublequotemark, rightsinglequotemark, NoSymbol, NoSymbol ] }; // ⰺ Ⰺ ⰹ Ⰹ ” ’
     key <AB06> { [           U2C45,      U2C15,             NoSymbol, NoSymbol,             NoSymbol,             NoSymbol, NoSymbol, NoSymbol ] }; // ⱅ Ⱅ
-    key <AB07> { [           U2C31,      U2C01,                U0311,    U0484,             NoSymbol,             NoSymbol,    U2C4A,    U2C1A ] }; // ⰱ Ⰱ  ̑ ҄ _ _ ⱊ Ⱊ
+    key <AB07> { [           U2C31,      U2C01,                U0311,    U0484,             NoSymbol,             NoSymbol,    U2C4A,    U2C1A ] }; // ⰱ Ⰱ  ̑  ҄ _ _ ⱊ Ⱊ
 };
 
 
@@ -247,13 +247,13 @@ xkb_symbols "slo_CyrlE1" {
     key <AD01> { [           U044A,      U042A,                U044C,    U042C,                   at,             NoSymbol, NoSymbol, NoSymbol ] }; // ъ Ъ ь Ь @
     key <AD02> { [           U0443,      U0423,                U044E,    U042E,                UA64B,                UA64A,    U0479,    U0478 ] }; // у У ю Ю ꙋ Ꙋ ѹ Ѹ
     key <AD03> { [           U0435,      U0415,                U0454,    U0404,                U044D,                U042D,    U0465,    U0464 ] }; // е Е є Є э Э ѥ Ѥ
-    key <AD04> { [           U0440,      U0420,                U0306,    U0487,            trademark,           registered, NoSymbol, NoSymbol ] }; // р Р ̆ ҇ ™ ®
+    key <AD04> { [           U0440,      U0420,                U0306,    U0487,            trademark,           registered, NoSymbol, NoSymbol ] }; // р Р ̆  ҇ ™ ®
     key <AD05> { [           U0442,      U0422,                U047F,    U047E,             NoSymbol,             NoSymbol, NoSymbol, NoSymbol ] }; // т Т ѿ Ѿ
     key <AD06> { [           U0437,      U0417,                U0455,    U0405,                UA641,                UA640,    UA643,    UA642 ] }; // з З ѕ Ѕ ꙁ Ꙁ ꙃ Ꙃ
     key <AD07> { [           U046B,      U046A,                U046D,    U046C,           rightarrow,            leftarrow,    U051B,    U051A ] }; // ѫ Ѫ ѭ Ѭ → ← ԛ Ԛ
-    key <AD08> { [           U0438,      U0418,                U0439,    U0419,             NoSymbol,             NoSymbol, NoSymbol, NoSymbol ] }; // и И й Й
+    key <AD08> { [           U0438,      U0418,                U0439,    U0419,             NoSymbol,             NoSymbol,    U0475,    U0474 ] }; // и И й Й _ _ ѵ Ѵ
     key <AD09> { [           U043E,      U041E,                U0461,    U0460,                U047B,                U047A,    U047D,    U047C ] }; // о О ѡ Ѡ ѻ Ѻ ѽ Ѽ
-    key <AD10> { [           U043F,      U041F,                U0486,    U0485,            downarrow,              uparrow, NoSymbol, NoSymbol ] }; // п П ҆ ҅ ↓ ↑
+    key <AD10> { [           U043F,      U041F,                U0486,    U0485,            downarrow,              uparrow, NoSymbol, NoSymbol ] }; // п П ҆  ҅ ↓ ↑
     key <AD11> { [           U044B,      U042B,                UA651,    UA650,                U2198,                U2197,    U2196,    U2199 ] }; // ы Ы ꙑ Ꙑ ↘ ↗ ↖ ↙
 
     // THIRD ROW
@@ -275,8 +275,8 @@ xkb_symbols "slo_CyrlE1" {
     key <AB01> { [           U0448,      U0428,                U0449,    U0429,                U2423,                U23D1,    U0471,    U0470 ] }; // ш Ш щ Щ ␣ ⏑ ѱ Ѱ
     key <AB02> { [           U0445,      U0425,                U0304, NoSymbol,   doublelowquotemark,   singlelowquotemark, NoSymbol, NoSymbol ] }; // х Х ̄ _ „ ‚
     key <AB03> { [           U0446,      U0426,             NoSymbol, NoSymbol,                 cent,            copyright, NoSymbol, NoSymbol ] }; // ц Ц _ _ ¢ ©
-    key <AB04> { [           U0432,      U0412,                U0475,    U0474,  leftdoublequotemark,  leftsinglequotemark, NoSymbol, NoSymbol ] }; // в В ѵ Ѵ “ ‘
-    key <AB05> { [           U0431,      U0411,                U0311,    U0484, rightdoublequotemark, rightsinglequotemark, NoSymbol, NoSymbol ] }; // б Б ̑ ҄ ” ’
+    key <AB04> { [           U0432,      U0412,                U045E,    U040E,  leftdoublequotemark,  leftsinglequotemark,    U0477,    U0476 ] }; // в В ў Ў “ ‘ ѷ Ѷ
+    key <AB05> { [           U0431,      U0411,                U0311,    U0484, rightdoublequotemark, rightsinglequotemark, NoSymbol, NoSymbol ] }; // б Б ̑  ҄ ” ’
     key <AB06> { [           U043D,      U041D,                U045A,    U040A,             NoSymbol,             NoSymbol, NoSymbol, NoSymbol ] }; // н Н њ Њ
     key <AB07> { [           U043C,      U041C,                   mu, NoSymbol,             NoSymbol,             NoSymbol,    U200C,    U2217 ] }; // м М ‌µ _ _ _ ‌ ∗
 };
@@ -292,27 +292,27 @@ xkb_symbols "slo_GlagE1" {
 
     // SECOND ROW
     key.type[Group1] = "EIGHT_LEVEL_ALPHABETIC";
-    key <AD01> { [           U2C4F,      U2C1F,                U2C50,    U2C20,                U2C53,                U2C23,       at, NoSymbol ] }; // ⱏ Ⱏ ⱐ Ⱐ ⱓ Ⱓ @
-    key <AD02> { [           U2C46,      U2C16,                U2C58,    U2C28,             NoSymbol,             NoSymbol, NoSymbol, NoSymbol ] }; // ⱆ Ⱆ ⱘ Ⱘ
-    key <AD03> { [           U2C35,      U2C05,                U2C57,    U2C27,             NoSymbol,             NoSymbol, NoSymbol, NoSymbol ] }; // ⰵ Ⰵ ⱗ Ⱗ
-    key <AD04> { [           U2C43,      U2C13,                U0306,    U0487,            trademark,           registered, NoSymbol, NoSymbol ] }; // ⱃ Ⱃ ̆ ҇ ™ ®
+    key <AD01> { [           U2C4F,      U2C1F,                U2C50,    U2C20,             NoSymbol,             NoSymbol,       at, NoSymbol ] }; // ⱏ Ⱏ ⱐ Ⱐ _ _ @
+    key <AD02> { [           U2C53,      U2C23,                U2C58,    U2C28,                U2C46,                U2C16, NoSymbol, NoSymbol ] }; // ⱓ Ⱓ ⱘ Ⱘ ⱆ Ⱆ
+    key <AD03> { [           U2C35,      U2C05,                U2C57,    U2C27,                U2C5D,                U2C2D, NoSymbol, NoSymbol ] }; // ⰵ Ⰵ ⱗ Ⱗ ⱝ Ⱝ
+    key <AD04> { [           U2C43,      U2C13,                U0306,    U0487,            trademark,           registered, NoSymbol, NoSymbol ] }; // ⱃ Ⱃ ̆  ҇ ™ ®
     key <AD05> { [           U2C45,      U2C15,             NoSymbol, NoSymbol,             NoSymbol,             NoSymbol, NoSymbol, NoSymbol ] }; // ⱅ Ⱅ
     key <AD06> { [           U2C38,      U2C08,                U2C37,    U2C07,             NoSymbol,             NoSymbol, NoSymbol, NoSymbol ] }; // ⰸ Ⰸ ⰷ Ⰷ
     key <AD07> { [           U2C56,      U2C26,                U2C59,    U2C29,           rightarrow,            leftarrow, NoSymbol, NoSymbol ] }; // ⱖ Ⱖ ⱙ Ⱙ → ←
-    key <AD08> { [           U2C3B,      U2C0B,                U2C3A,    U2C0A,             NoSymbol,             NoSymbol, NoSymbol, NoSymbol ] }; // ⰻ Ⰻ ⰺ Ⰺ
+    key <AD08> { [           U2C3A,      U2C0A,                U2C39,    U2C09,             NoSymbol,             NoSymbol, NoSymbol, NoSymbol ] }; // ⰺ Ⰺ ⰹ Ⰹ
     key <AD09> { [           U2C41,      U2C11,                U2C49,    U2C19,             NoSymbol,             NoSymbol, NoSymbol, NoSymbol ] }; // ⱁ Ⱁ ⱉ Ⱉ
-    key <AD10> { [           U2C42,      U2C12,                U0486,    U0485,            downarrow,              uparrow, NoSymbol, NoSymbol ] }; // ⱂ Ⱂ ҆ ҅ ↓ ↑
-    key <AD11> { [           U2C3A,      U2C0A,             NoSymbol, NoSymbol,                U2198,                U2197,    U2196,    U2199 ] }; // ⰺ Ⰺ _ _ ↘ ↗ ↖ ↙
+    key <AD10> { [           U2C42,      U2C12,                U0486,    U0485,            downarrow,              uparrow, NoSymbol, NoSymbol ] }; // ⱂ Ⱂ ҆  ҅ ↓ ↑
+    key <AD11> { [           U2C3A,      U2C0A,                U2C39,    U2C09,                U2198,                U2197,    U2196,    U2199 ] }; // ⰺ Ⰺ ⰹ Ⰹ ↘ ↗ ↖ ↙
 
     // THIRD ROW
     key.type[Group1] = "EIGHT_LEVEL_ALPHABETIC";
-    key <AC01> { [           U2C30,      U2C00,                U2C5D,    U2C2D,                U2C51,                U2C21, NoSymbol, NoSymbol ] }; // ⰰ Ⰰ ⱝ Ⱝ ⱑ Ⱑ
+    key <AC01> { [           U2C30,      U2C00,                U2C5C,    U2C2C,                U2C51,                U2C21, NoSymbol, NoSymbol ] }; // ⰰ Ⰰ ⱜ Ⱜ ⱑ Ⱑ
     key <AC02> { [           U2C44,      U2C14,             NoSymbol, NoSymbol,             NoSymbol,                U2211, NoSymbol, NoSymbol ] }; // ⱄ Ⱄ _ _ _ ∑
     key <AC03> { [           U2C34,      U2C04,                U2C3C,    U2C0C,             NoSymbol,             NoSymbol, NoSymbol, NoSymbol ] }; // ⰴ Ⰴ ⰼ Ⰼ
     key <AC04> { [           U2C47,      U2C17,                U2C5A,    U2C2A,             NoSymbol,             NoSymbol, NoSymbol, NoSymbol ] }; // ⱇ Ⱇ ⱚ Ⱚ
     key <AC05> { [           U2C36,      U2C06,             NoSymbol, NoSymbol,                U02BF,                U261B,    U02BE,    U261A ] }; // ⰶ Ⰶ _ _ ʿ ☛ ʾ ☚
     key <AC06> { [           U2C48,      U2C18,                U2C33,    U2C03,             NoSymbol,             NoSymbol, NoSymbol, NoSymbol ] }; // ⱈ Ⱈ ⰳ Ⰳ
-    key <AC07> { [           U2C5C,      U2C2C,                U2C54,    U2C24,                U2C39,                U2C09, NoSymbol, NoSymbol ] }; // ⱜ Ⱜ ⱔ Ⱔ  ⰹ Ⰹ
+    key <AC07> { [           U2C3B,      U2C0B,                U2C5B,    U2C2B,                U2C39,                U2C09, NoSymbol, NoSymbol ] }; // ⰻ Ⰻ ⱛ Ⱛ ⰹ Ⰹ
     key <AC08> { [           U2C3D,      U2C0D,             NoSymbol, NoSymbol,             NoSymbol,             NoSymbol, NoSymbol, NoSymbol ] }; // ⰽ Ⰽ
     key <AC09> { [           U2C3E,      U2C0E,             NoSymbol, NoSymbol,             NoSymbol,             NoSymbol, NoSymbol, NoSymbol ] }; // ⰾ Ⰾ
     key <AC10> { [           U2C4D,      U2C1D,             NoSymbol, NoSymbol,             NoSymbol,             NoSymbol, NoSymbol, NoSymbol ] }; // ⱍ Ⱍ
@@ -323,10 +323,10 @@ xkb_symbols "slo_GlagE1" {
     key <AB01> { [           U2C4E,      U2C1E,                U2C4B,    U2C1B,                U2423,                U23D1, NoSymbol, NoSymbol ] }; // ⱎ Ⱎ ⱋ Ⱋ ␣ ⏑
     key <AB02> { [           U2C52,      U2C22,                U0304, NoSymbol,   doublelowquotemark,   singlelowquotemark, NoSymbol, NoSymbol ] }; // ⱒ Ⱒ ̄ _ „ ‚
     key <AB03> { [           U2C4C,      U2C1C,             NoSymbol, NoSymbol,                 cent,            copyright, NoSymbol, NoSymbol ] }; // ⱌ Ⱌ _ _ ¢ ©
-    key <AB04> { [           U2C32,      U2C02,             NoSymbol, NoSymbol,  leftdoublequotemark,  leftsinglequotemark,    U2C5B,    U2C2B ] }; // ⰲ Ⰲ _ _ “ ‘ ⱛ Ⱛ
-    key <AB05> { [           U2C31,      U2C01,                U0311,    U0484, rightdoublequotemark, rightsinglequotemark,    U2C4A,    U2C1A ] }; // ⰱ Ⰱ ̑ ҄ ” ’ ⱊ Ⱊ
+    key <AB04> { [           U2C32,      U2C02,             NoSymbol, NoSymbol,  leftdoublequotemark,  leftsinglequotemark, NoSymbol, NoSymbol ] }; // ⰲ Ⰲ _ _ “ ‘
+    key <AB05> { [           U2C31,      U2C01,                U0311,    U0484, rightdoublequotemark, rightsinglequotemark,    U2C4A,    U2C1A ] }; // ⰱ Ⰱ ̑  ҄ ” ’ ⱊ Ⱊ
     key <AB06> { [           U2C40,      U2C10,             NoSymbol, NoSymbol,             NoSymbol,             NoSymbol, NoSymbol, NoSymbol ] }; // ⱀ Ⱀ
-    key <AB07> { [           U2C3F,      U2C0F,                U2C5E,    U2C2E,             NoSymbol,             NoSymbol,    U200C,    U2217 ] }; // ⰿ Ⰿ ⱞ Ⱞ _ _ ‌ ∗
+    key <AB07> { [           U2C3F,      U2C0F,                U2C5E,    U2C2E,             NoSymbol,             NoSymbol,    U200C,    U2217 ] }; // ⰿ Ⰿ ⱞ Ⱞ _ _ ∗
 };
 
 // todo SLO_BGBDS

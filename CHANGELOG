@@ -1,0 +1,132 @@
+4.0.116 - 2025-06-09
+- added izhiza keys
+- fix project init date based on old project files https://gitlab.com/Sizdastato/marousja/
+- added short cyrillic u
+- remapped glagolitic stop and i,y & j variants
+- changed versioning to release.patch.fix shemata
+
+3.6.8 - 2025-05-18
+- major refactoring
+- updated screenshots
+
+3.6.4 - 2024-08-06
+- minor project renaming of inconsistent naming
+
+3.6.3 - 2024-07-12
+- major structuring of xkb file and xml ruleset
+- full reimplemented rust installer
+- added iso level keys support
+
+3.6.0 - 2024-05-02
+- minor remapping or rare used keys qua, dze, ksi, izhiza
+
+3.5.1 - 2022-07-31
+- fixes to rust installer script
+
+3.5.0 - 2022-07-26
+- moved project back to github
+- added rust installer script
+- minor project renaming
+
+3.98 - 2021-05-03
+- android keyboard updated
+- fixed some transcription between glagolic and kyrillic
+
+3.83 - 2021-05-01
+- glagolic layouts updated
+- added ascii-keymaps / sign comments
+- added support for church-slavic cyrillic script
+- renamed all layouts
+
+3.57 - 2021-04-30
+- updated layout to E1 standard
+- remapped main linux layouts (non-glagolic)
+
+2.14 - 2021-04-27
+- changes tilde and ring above
+- rename from Мароуся to Марꙋсьа
+- apply и -> і
+- some remapping
+- removed & replaced useless bindings
+
+2.0 - 2021-03-25
+- added / updated language-codes
+- added southers style latin interslavic + extras layout, based on E1 (2020)
+- added southers style cyrillic layout for interslavic + extras
+- added glagolic layout, based on marousja-layout
+- todo: add full support of church-slavic language
+- fixed some static entries
+- glagolic layout fix
+
+1.5 - 2021-03-23
+- updated android-version
+- removed redundant entries in android-version
+- updated windows layout to current style, added installer
+- windows version is named miroslav, cause of 10-char limit for layout-names by OS
+- fixed grammer
+- changes lacation of ѥ and є
+
+1.5 - 2020-10-15
+- updated android layout, changes from є to e and other minor fixes
+
+1.4 - 2020-10-01
+- linux layout ѫ and у as well as ꙑ and ы switch
+- android app updated, now by SimpleSlavicKeyboard (old Version is no longer)
+- android version debloated
+- renamed allmost everything from interslavic to slavic, from miroslavic to marousja
+- ISO code now in use: sla & sla_ISV for need
+
+1.3 – 2020–05–28
+- update windows layout
+
+1.3 - 2020-05-24
+- android layout updated to mainly interslavic
+
+1.2 - 2020-05-11
+- got rid of redundants as far as possible
+- layout now differ between ou and u as well as ae and a and i and ii
+- designed for mainly eastern europe users, familar with east-slavic layouts
+- removed letters, not used in slavic or interslavic language/-s
+
+0.8 - 2020-04-08
+- more usefull layout confuguration
+- replaced ѱ and ꙍ by æ and ѿ as the first are not used widely, but the second
+- only one layout from now on, marusja
+
+0.7 - 2020-03-24
+- rename to miroslav (slavic language)
+- rename to marusja (russian version)
+- android keyboard updated, but still not finished, it uses russian layout for orthography reason
+
+0.4 - 2019-08-05
+- android miroslavic-keyboard layout
+  (new, now cyrillic only, as the best latin-based keyboard is slowakian one)
+
+0.25 - 2018-07-14
+- fix u & ju archaic displacement
+- change nummero to hunderts-sign
+- changed release names mezuslav to medzslav
+- release missing windows files
+- filled readme with credits
+- android AnySoftKeyboard-Layout in-dev. (different layout)
+
+0.24 - 2018-06-03
+- fix changed z & y
+
+0.23 - 2018-06-05
+- split layout in miroslavic (world) and medzuslavic (slavic)
+- expand miroslavic by non-slavic letters
+- fix missfitting medzuslavic letters layout
+
+0.22 - 2018-06-02
+- expand layout by european non-slavic cyrillic letters
+- expand layout by archaic slavic letters
+
+0.21 - 2018-05-20
+- expand layout by all modern slavic letters
+- expand layout by some archaic letters
+
+0.1 - 2018-05-13
+- create cyrillic layout, based on russian
+- init windows layout-file
+- init latin linux layout-file
