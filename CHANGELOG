@@ -1,3 +1,10 @@
+4.0.118 - 2025-06-20
+- fixed installer interaction logic
+- some minor file refactoring
+
+4.0.117 - 2025-06-20
+- enhanced the installer with some interaction
+
 4.0.116 - 2025-06-09
 - added izhiza keys
 - fix project init date based on old project files https://gitlab.com/Sizdastato/marousja/

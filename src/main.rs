@@ -36,10 +36,13 @@ fn main() {
             // set string reference to local source files
             let res_str_ref_xkb_file = "res".to_owned()
                 + MAIN_SEPARATOR_STR + "slo.xkb";
+            // this file contains just a xml entry, for addition in rules/base & rules/evdev
             let res_str_ref_xml_layout_file = "res".to_owned()
-                + MAIN_SEPARATOR_STR + "slo_layout.xml";
+                + MAIN_SEPARATOR_STR + "slo_entry.xml";
+            // this file could be used for manual addition in /rules
+            // FIXME: if someone knows, how to add a custom rulesset file to /rules, and use it without extras, please share your knowledge
             let res_str_ref_evdev_xml_file = "res".to_owned()
-                + MAIN_SEPARATOR_STR + "evdev.xml";
+                + MAIN_SEPARATOR_STR + "slo.xml";
 
             // set string reference to local backup
             let bk_str_ref_bk_folder = "bk".to_owned();
@@ -190,17 +193,12 @@ fn main() {
 
             // check previous installation footprint
             if (path_sys_slo_file.exists()) {
-                println!("detected previous xkb file installation, do you want to update it? [Y/n] ");
+                println!("detected previous xkb file ({}) installation, do you want to update it? [Y/n] ", sys_str_ref_xkb_file);
                 if proceed_or(YES) {
+
                     /*
                     uninstallation process xkb START
                     */
-                    println!("please approve the remove of {}", sys_str_ref_xkb_file);
-                    if !proceed(){
-                        println!("installation canceled");
-                        return;
-                    }
-                    
                     let command_clean_xkb = format!("sudo rm -i {}", sys_str_ref_xkb_file);
                     let output_command_clean_xkb = Command::new("sh")
                         .arg("-c")
@@ -211,7 +209,7 @@ fn main() {
                         let error_clean_xkb = String::from_utf8_lossy(&output_command_clean_xkb.stderr);
                         println!("Error: {}", error_clean_xkb);
                     } else {
-                        println!("cleaning of xkb-file successful");
+                        println!("cleaning of previous xkb-file successful");
                     }
                 }
             }
@@ -246,7 +244,7 @@ fn main() {
             let str_evdev_xml = fs::read_to_string(path_sys_evdev_xml)
                 .expect("issue reading system evdev.xml");
             let str_slo_xml = fs::read_to_string(path_slo_xml)
-                .expect("issue reading local slo_layout.xml file");
+                .expect("issue reading local slo_entry.xml file");
 
             // make system xml files parsable
             let ref_str_base_xml = str_base_xml.as_str();
