@@ -1,6 +1,6 @@
 [package]
 name = "xkb_layout"
-version = "4.0.116"
+version = "4.0.117"
 authors = ["Korcakov, Roman"]
 edition = "2021"
 rust-version = "1.71.0"
@@ -10,6 +10,7 @@ publish = false
 
 [dependencies]
 os-release = "0.1.0"
+proceed = "0.1.0"
 # xkeyboard-config = {version = "2.42-1", optional = false}
 # https://gitlab.freedesktop.org/xkeyboard-config/xkeyboard-config
 # xkbcommon = { version = "0.7", features = ["wayland"] }

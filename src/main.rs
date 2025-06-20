@@ -3,6 +3,7 @@ use std::{env, fs, path};
 use std::path::Path;
 use std::process::Command;
 use os_release::OsRelease;
+use proceed::{proceed, proceed_or, NO, YES};
 
 /*
 ---------------------------
@@ -22,6 +23,12 @@ after system updates braking the installation)
 // print!(env!("HOME"));
 
 fn main() {
+
+    print!("You started the installation of Slqavjanskqi xkb layout, proceed? [y/N]");
+    if !proceed(){
+        println!("See you");
+        return;
+    }
 
     // determine OS and select installation process
     match env::consts::OS {
@@ -49,10 +56,12 @@ fn main() {
             let path_slo_xml = Path::new(&res_str_ref_xml_layout_file);
 
             if path_slo_xkb.exists() == false {
+                // executable has to be run at / root project folder
                 println!("installation corrupted, missing xkb file, aborting");
                 return;
             }
             if path_slo_xml.exists() == false {
+                // executable has to be run at / root project folder
                 println!("installation corrupted, missing xml file, aborting");
                 return;
             }
@@ -125,50 +134,55 @@ fn main() {
             }
 
             /*
-            backup process START
+                backup process START
             */
+            println!("Do you want to create a backup of your xkb rule files? [Y/n] ");
+            if proceed_or(YES){
+                // if backup intended
 
-            // check existence of local backup folder
-            if (path_backup_folder.exists() == false) {
-                fs::create_dir_all(path_backup_folder)
-                    .expect("failed to create backup folder");
-            }
-
-            // create backup of system base.xml
-            if (path_backup_base_xml.exists() == false) {
-                let command_backup_base_xml = format!("sudo cp {} {}", sys_str_ref_base_xml_file, bk_str_ref_bk_base_xml);
-                let output_cmd_backup_base_xml = Command::new("sh")
-                    .arg("-c")
-                    .arg(command_backup_base_xml)
-                    .output()
-                    .expect("backup of base.xml rules file failed");
-                if (output_cmd_backup_base_xml.status.success() == false) {
-                    let error_base_xml_copy = String::from_utf8_lossy(&output_cmd_backup_base_xml.stderr);
-                    println!("Error: {}", error_base_xml_copy);
-                } else {
-                    println!("backup of base.xml successful");
+                // check existence of local backup folder
+                if (path_backup_folder.exists() == false) {
+                    fs::create_dir_all(path_backup_folder)
+                        .expect("failed to create backup folder");
                 }
-            } else {
-                println!("backup of base.xml already exists");
+
+                // create backup of system base.xml
+                if (path_backup_base_xml.exists() == false) {
+                    let command_backup_base_xml = format!("sudo cp {} {}", sys_str_ref_base_xml_file, bk_str_ref_bk_base_xml);
+                    let output_cmd_backup_base_xml = Command::new("sh")
+                        .arg("-c")
+                        .arg(command_backup_base_xml)
+                        .output()
+                        .expect("backup of base.xml rules file failed");
+                    if (output_cmd_backup_base_xml.status.success() == false) {
+                        let error_base_xml_copy = String::from_utf8_lossy(&output_cmd_backup_base_xml.stderr);
+                        println!("Error: {}", error_base_xml_copy);
+                    } else {
+                        println!("backup of base.xml successful");
+                    }
+                } else {
+                    println!("backup of base.xml already exists");
+                }
+
+                // create backup of system evdev.xml
+                if (path_backup_evdev_xml.exists() == false) {
+                    let command_backup_evdev_xml = format!("sudo cp {} {}", sys_str_ref_evdev_xml_file, bk_str_ref_bk_evdev_xml);
+                    let output_cmd_backup_evdev_xml = Command::new("sh")
+                        .arg("-c")
+                        .arg(command_backup_evdev_xml)
+                        .output()
+                        .expect("backup of evdev.xml rules file failed");
+                    if (output_cmd_backup_evdev_xml.status.success() == false) {
+                        let error_evdev_xml_copy = String::from_utf8_lossy(&output_cmd_backup_evdev_xml.stderr);
+                        println!("Error: {}", error_evdev_xml_copy);
+                    } else {
+                        println!("backup of evdev.xml successful");
+                    }
+                } else {
+                    println!("backup of evdev.xml already exists");
+                }
             }
 
-            // create backup of system evdev.xml
-            if (path_backup_evdev_xml.exists() == false) {
-                let command_backup_evdev_xml = format!("sudo cp {} {}", sys_str_ref_evdev_xml_file, bk_str_ref_bk_evdev_xml);
-                let output_cmd_backup_evdev_xml = Command::new("sh")
-                    .arg("-c")
-                    .arg(command_backup_evdev_xml)
-                    .output()
-                    .expect("backup of evdev.xml rules file failed");
-                if (output_cmd_backup_evdev_xml.status.success() == false) {
-                    let error_evdev_xml_copy = String::from_utf8_lossy(&output_cmd_backup_evdev_xml.stderr);
-                    println!("Error: {}", error_evdev_xml_copy);
-                } else {
-                    println!("backup of evdev.xml successful");
-                }
-            } else {
-                println!("backup of evdev.xml already exists");
-            }
 
             /*
             installation process xkb START
@@ -176,34 +190,50 @@ fn main() {
 
             // check previous installation footprint
             if (path_sys_slo_file.exists()) {
-                println!("detected previous installation");
-                println!("please approve the remove of {}", sys_str_ref_xkb_file);
-                let command_clean_xkb = format!("sudo rm -i {}", sys_str_ref_xkb_file);
-                let output_command_clean_xkb = Command::new("sh")
-                    .arg("-c")
-                    .arg(command_clean_xkb)
-                    .output()
-                    .expect("failed to clean previous xkb file");
-                if (output_command_clean_xkb.status.success() == false) {
-                    let error_clean_xkb = String::from_utf8_lossy(&output_command_clean_xkb.stderr);
-                    println!("Error: {}", error_clean_xkb);
-                } else {
-                    println!("cleaning of xkb-file successful");
+                println!("detected previous xkb file installation, do you want to update it? [Y/n] ");
+                if proceed_or(YES) {
+                    /*
+                    uninstallation process xkb START
+                    */
+                    println!("please approve the remove of {}", sys_str_ref_xkb_file);
+                    if !proceed(){
+                        println!("installation canceled");
+                        return;
+                    }
+                    
+                    let command_clean_xkb = format!("sudo rm -i {}", sys_str_ref_xkb_file);
+                    let output_command_clean_xkb = Command::new("sh")
+                        .arg("-c")
+                        .arg(command_clean_xkb)
+                        .output()
+                        .expect("failed to clean previous xkb file");
+                    if (output_command_clean_xkb.status.success() == false) {
+                        let error_clean_xkb = String::from_utf8_lossy(&output_command_clean_xkb.stderr);
+                        println!("Error: {}", error_clean_xkb);
+                    } else {
+                        println!("cleaning of xkb-file successful");
+                    }
                 }
             }
 
-            // copy local xkb file to system symbols folder
-            let command_install_xkb = format!("sudo cp {} {}", res_str_ref_xkb_file, sys_str_ref_xkb_file);
-            let output_command_instal_xkb = Command::new("sh")
-                .arg("-c")
-                .arg(command_install_xkb)
-                .output()
-                .expect("failed to install xkb file");
-            if (output_command_instal_xkb.status.success() == false) {
-                let error_xkb_installation = String::from_utf8_lossy(&output_command_instal_xkb.stderr);
-                println!("Error: {}", error_xkb_installation);
-            } else {
-                println!("installation of xkb-file successful");
+            /*
+            install if not present 
+            */
+            // FIXME: double exists check for same file
+            if !(path_sys_slo_file.exists()) {
+                // copy local xkb file to system symbols folder
+                let command_install_xkb = format!("sudo cp {} {}", res_str_ref_xkb_file, sys_str_ref_xkb_file);
+                let output_command_instal_xkb = Command::new("sh")
+                    .arg("-c")
+                    .arg(command_install_xkb)
+                    .output()
+                    .expect("failed to install xkb file");
+                if (output_command_instal_xkb.status.success() == false) {
+                    let error_xkb_installation = String::from_utf8_lossy(&output_command_instal_xkb.stderr);
+                    println!("Error: {}", error_xkb_installation);
+                } else {
+                    println!("installation of xkb-file successful");
+                }
             }
 
             /*
@@ -221,12 +251,18 @@ fn main() {
             // make system xml files parsable
             let ref_str_base_xml = str_base_xml.as_str();
             let ref_str_evdev_xml = str_evdev_xml.as_str();
-
+            
             // temporary-working-xml-file
             let mut temp_str_base_xml = String::new();
 
             // check layout footprint
+            // FIXME: asumption that evdev.xml is equal to base.xml
             if (str_base_xml.contains(">slo<")) {
+                println!("detected previous xml entry installation, do you want to remove it? [Y/n] ");
+                if !proceed_or(YES) {
+                    println!("See you soon.");
+                    return;
+                }
                 // if layout exist, skip copying it into the temp_file
                 let mut start_str_index = 0;
 
