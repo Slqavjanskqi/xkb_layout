@@ -24,15 +24,20 @@ after system updates braking the installation)
 
 fn main() {
 
-    print!("You started the installation of Slqavjanskqi xkb layout, proceed? [y/N]");
+    print!("You started the installation management of Slqavjanskqi xkb layout, proceed? [y/N]");
     if !proceed(){
-        println!("See you");
+        println!("Ahoj");
         return;
     }
 
     // determine OS and select installation process
     match env::consts::OS {
         "linux" => {
+
+            /*
+            INSTALLATION PAKAGE VALIDATION
+            */
+
             // set string reference to local source files
             let res_str_ref_xkb_file = "res".to_owned()
                 + MAIN_SEPARATOR_STR + "slo.xkb";
@@ -73,6 +78,11 @@ fn main() {
             let path_backup_folder = Path::new(&bk_str_ref_bk_folder);
             let path_backup_base_xml = Path::new(&bk_str_ref_bk_base_xml);
             let path_backup_evdev_xml = Path::new(&bk_str_ref_bk_evdev_xml);
+
+
+            /*
+            VALIDATE SYSTEM PATHS
+            */
 
             // set string references to system files
             let sys_str_ref_symbols_folder;
@@ -136,10 +146,12 @@ fn main() {
                 return;
             }
 
+
             /*
-                backup process START
+            INIT BACKUP
             */
-            println!("Do you want to create a backup of your xkb rule files? [Y/n] ");
+
+            print!("Do you want to create a backup of your xkb rule files? [Y/n] ");
             if proceed_or(YES){
                 // if backup intended
 
@@ -188,12 +200,12 @@ fn main() {
 
 
             /*
-            installation process xkb START
+            INIT UNINSTALLATION
             */
 
             // check previous installation footprint
             if (path_sys_slo_file.exists()) {
-                println!("detected previous xkb file ({}) installation, do you want to update it? [Y/n] ", sys_str_ref_xkb_file);
+                print!("Detected previous xkb file ({}), do you want to delete old version? [Y/n] ", sys_str_ref_xkb_file);
                 if proceed_or(YES) {
 
                     /*
@@ -215,26 +227,6 @@ fn main() {
             }
 
             /*
-            install if not present 
-            */
-            // FIXME: double exists check for same file
-            if !(path_sys_slo_file.exists()) {
-                // copy local xkb file to system symbols folder
-                let command_install_xkb = format!("sudo cp {} {}", res_str_ref_xkb_file, sys_str_ref_xkb_file);
-                let output_command_instal_xkb = Command::new("sh")
-                    .arg("-c")
-                    .arg(command_install_xkb)
-                    .output()
-                    .expect("failed to install xkb file");
-                if (output_command_instal_xkb.status.success() == false) {
-                    let error_xkb_installation = String::from_utf8_lossy(&output_command_instal_xkb.stderr);
-                    println!("Error: {}", error_xkb_installation);
-                } else {
-                    println!("installation of xkb-file successful");
-                }
-            }
-
-            /*
             uninstallation process xml START
             */
 
@@ -246,7 +238,7 @@ fn main() {
             let str_slo_xml = fs::read_to_string(path_slo_xml)
                 .expect("issue reading local slo_entry.xml file");
 
-            // make system xml files parsable
+            // make system xml files to parsable strings as copy
             let ref_str_base_xml = str_base_xml.as_str();
             let ref_str_evdev_xml = str_evdev_xml.as_str();
             
@@ -256,102 +248,134 @@ fn main() {
             // check layout footprint
             // FIXME: asumption that evdev.xml is equal to base.xml
             if (str_base_xml.contains(">slo<")) {
-                println!("detected previous xml entry installation, do you want to remove it? [Y/n] ");
-                if !proceed_or(YES) {
-                    println!("See you soon.");
-                    return;
-                }
-                // if layout exist, skip copying it into the temp_file
-                let mut start_str_index = 0;
+                print!("Detected previous xml entry in ({}), do you want to remove it? [Y/n] ", sys_str_ref_base_xml_file);
+                if proceed_or(YES) {
 
-                // parse through all layouts
-                while let Some(layout_start_tag_index) = ref_str_base_xml[start_str_index..].find("<layout>") {
-                    // save the layout starting str_index
-                    temp_str_base_xml.push_str(&ref_str_base_xml[start_str_index..(start_str_index + layout_start_tag_index)]);
-                    // read until the end of layout block
-                    if let Some(layout_end_tag_index) = ref_str_base_xml[(start_str_index + layout_start_tag_index)..].find("</layout>") {
-                        let layout_content = &ref_str_base_xml[((start_str_index + layout_start_tag_index) + 8)..(start_str_index + layout_start_tag_index + layout_end_tag_index)];
-                        if (layout_content.contains(">slo<") == false) {
-                            temp_str_base_xml.push_str("<layout>");
-                            temp_str_base_xml.push_str(layout_content);
-                            temp_str_base_xml.push_str("</layout>");
+                    // if layout exist, skip copying it into the temp_file
+                    let mut start_str_index = 0;
+
+                    // parse through all layouts
+                    while let Some(layout_start_tag_index) = ref_str_base_xml[start_str_index..].find("<layout>") {
+                        // save the layout starting str_index
+                        temp_str_base_xml.push_str(&ref_str_base_xml[start_str_index..(start_str_index + layout_start_tag_index)]);
+                        // read until the end of layout block
+                        if let Some(layout_end_tag_index) = ref_str_base_xml[(start_str_index + layout_start_tag_index)..].find("</layout>") {
+                            let layout_content = &ref_str_base_xml[((start_str_index + layout_start_tag_index) + 8)..(start_str_index + layout_start_tag_index + layout_end_tag_index)];
+                            if (layout_content.contains(">slo<") == false) {
+                                temp_str_base_xml.push_str("<layout>");
+                                temp_str_base_xml.push_str(layout_content);
+                                temp_str_base_xml.push_str("</layout>");
+                            }
+                            // else if layout contains target layout, skip copying it into the new file
+                            start_str_index = start_str_index + layout_start_tag_index + layout_end_tag_index + 9;
+                        } else {
+                            // starting layout tag does not have a ending layout tag, file corrupted
+                            println!("system base.xml is corrupted, abborting");
+                            return;
                         }
-                        // else if layout contains target layout, skip copying it into the new file
-                        start_str_index = start_str_index + layout_start_tag_index + layout_end_tag_index + 9;
-                    } else {
-                        // starting layout tag does not have a ending layout tag, file corrupted
-                        println!("system base.xml is corrupted, abborting");
-                        return;
                     }
+                    // all layouts parsed, copy everything what is left behind into the temporary-working-xml-file
+                    temp_str_base_xml.push_str(&ref_str_base_xml[start_str_index..]);
                 }
-                // all layouts parsed, copy everything what is left behind into the temporary-working-xml-file
-                temp_str_base_xml.push_str(&ref_str_base_xml[start_str_index..]);
             } else {
                 // if file does not contain target layout, just use it as it is
-                temp_str_base_xml = str_base_xml;
+                temp_str_base_xml = str_base_xml.clone();
             }
+
 
             /*
-            installation process xml START
+            INIT INSTALLATION
             */
+            print!("Do you want to install missing files now? [Y/n]");
+            if proceed_or(YES) {
 
-            // install layout-xml into the temporary-working-xml-file
-            // split the temp-xml-file-string right before the first layout
-            // and add target xml layout in between the split string
-            let (part1_str_base_xml, part2_str_base_xml) = temp_str_base_xml.split_at(temp_str_base_xml.find("<layout>").unwrap());
-            let str_new_base_xml = part1_str_base_xml.to_owned() + str_slo_xml.as_str() + part2_str_base_xml;
-            // write modified string into the temp-working-xml-file
-            fs::write(Path::new(&temp_str_ref_temp_xml_file.clone()), str_new_base_xml.to_owned())
-                .expect("issue writing temporary xml file");
-            println!("successfully written temporary working xml file");
+                // FIXME: double exists check for same file
+                if !(path_sys_slo_file.exists()) {
+                    // copy local xkb file to system symbols folder
+                    let command_install_xkb = format!("sudo cp {} {}", res_str_ref_xkb_file, sys_str_ref_xkb_file);
+                    let output_command_instal_xkb = Command::new("sh")
+                        .arg("-c")
+                        .arg(command_install_xkb)
+                        .output()
+                        .expect("failed to install xkb file");
+                    if (output_command_instal_xkb.status.success() == false) {
+                        let error_xkb_installation = String::from_utf8_lossy(&output_command_instal_xkb.stderr);
+                        println!("Error: {}", error_xkb_installation);
+                    } else {
+                        println!("installation of xkb-file successful");
+                    }
+                } else {
+                    // file gets not overwritten, skip this step
+                }
 
-            // copy and overwrite system xkb and xml files
-            let command_copy_xkb = format!("sudo cp -rf {} {}", res_str_ref_xkb_file, sys_str_ref_xkb_file);
-            let command_copy_base_xml = format!("sudo cp -rf {} {}", temp_str_ref_temp_xml_file, sys_str_ref_base_xml_file);
-            // TODO: may base.xml and evdev.xml are different for some users? -> use second temp_xml
-            let command_copy_evdev_xml = format!("sudo cp -rf {} {}", temp_str_ref_temp_xml_file, sys_str_ref_evdev_xml_file);
+                /*
+                installation process xml START
+                */
 
-            // execute installation commands
-            let output_cmd_install_sys_xkb = Command::new("sh")
-                .arg("-c")
-                .arg(command_copy_xkb)
-                .output()
-                .expect("failed to install xkb file");
-            if (output_cmd_install_sys_xkb.status.success() == false) {
-                let error_install_sys_xkb = String::from_utf8_lossy(&output_cmd_install_sys_xkb.stderr);
-                println!("Error: {}", error_install_sys_xkb);
-            } else {
-                println!("successfully installed xkb-file")
+                if !(str_base_xml.contains(">slo<")) {
+
+                    // install layout-xml into the temporary-working-xml-file
+                    // split the temp-xml-file-string right before the first layout
+                    // and add target xml layout in between the split string
+                    let (part1_str_base_xml, part2_str_base_xml) = temp_str_base_xml.split_at(temp_str_base_xml.find("<layout>").unwrap());
+                    let str_new_base_xml = part1_str_base_xml.to_owned() + str_slo_xml.as_str() + part2_str_base_xml;
+                    // write modified string into the temp-working-xml-file
+                    fs::write(Path::new(&temp_str_ref_temp_xml_file.clone()), str_new_base_xml.to_owned())
+                        .expect("issue writing temporary xml file");
+                    println!("successfully written temporary working xml file");
+
+                    // copy and overwrite system xkb and xml files
+                    let command_copy_xkb = format!("sudo cp -rf {} {}", res_str_ref_xkb_file, sys_str_ref_xkb_file);
+                    let command_copy_base_xml = format!("sudo cp -rf {} {}", temp_str_ref_temp_xml_file, sys_str_ref_base_xml_file);
+                    // TODO: may base.xml and evdev.xml are different for some users? -> use second temp_xml
+                    let command_copy_evdev_xml = format!("sudo cp -rf {} {}", temp_str_ref_temp_xml_file, sys_str_ref_evdev_xml_file);
+
+                    // execute installation commands
+                    let output_cmd_install_sys_xkb = Command::new("sh")
+                        .arg("-c")
+                        .arg(command_copy_xkb)
+                        .output()
+                        .expect("failed to install xkb file");
+
+                    print!("do you want to install the newest xml [Y/n]");
+                    if proceed_or(YES){
+                        if (output_cmd_install_sys_xkb.status.success() == false) {
+                            let error_install_sys_xkb = String::from_utf8_lossy(&output_cmd_install_sys_xkb.stderr);
+                            println!("Error: {}", error_install_sys_xkb);
+                        } else {
+                            println!("successfully installed xkb-file")
+                        }
+
+                        let output_cmd_install_sys_base_xml = Command::new("sh")
+                            .arg("-c")
+                            .arg(command_copy_base_xml)
+                            .output()
+                            .expect("failed to update base.xml file");
+                        if (output_cmd_install_sys_base_xml.status.success() == false) {
+                            let error_install_sys_base = String::from_utf8_lossy(&output_cmd_install_sys_base_xml.stderr);
+                            println!("Error: {}", error_install_sys_base);
+                        } else {
+                            println!("successfully updated base.xml")
+                        }
+
+                        let output_cmd_install_sys_evdev_xml = Command::new("sh")
+                            .arg("-c")
+                            .arg(command_copy_evdev_xml)
+                            .output()
+                            .expect("failed to update evdev.xml file");
+                        if (output_cmd_install_sys_evdev_xml.status.success() == false) {
+                            let error_mv_sys_evdev = String::from_utf8_lossy(&output_cmd_install_sys_evdev_xml.stderr);
+                            println!("Error: {}", error_mv_sys_evdev);
+                        } else {
+                            println!("successfully updated evdev.xml")
+                        }
+                    }
+                // remove temp working file
+                fs::remove_file(temp_str_ref_temp_xml_file).expect("issue, while deleting temp.xml file");
+                }
             }
 
-            let output_cmd_install_sys_base_xml = Command::new("sh")
-                .arg("-c")
-                .arg(command_copy_base_xml)
-                .output()
-                .expect("failed to update base.xml file");
-            if (output_cmd_install_sys_base_xml.status.success() == false) {
-                let error_install_sys_base = String::from_utf8_lossy(&output_cmd_install_sys_base_xml.stderr);
-                println!("Error: {}", error_install_sys_base);
-            } else {
-                println!("successfully updated base.xml")
-            }
-
-            let output_cmd_install_sys_evdev_xml = Command::new("sh")
-                .arg("-c")
-                .arg(command_copy_evdev_xml)
-                .output()
-                .expect("failed to update evdev.xml file");
-            if (output_cmd_install_sys_evdev_xml.status.success() == false) {
-                let error_mv_sys_evdev = String::from_utf8_lossy(&output_cmd_install_sys_evdev_xml.stderr);
-                println!("Error: {}", error_mv_sys_evdev);
-            } else {
-                println!("successfully updated evdev.xml")
-            }
-
-            // remove temp working file
-            fs::remove_file(temp_str_ref_temp_xml_file).expect("issue, while deleting temp.xml file");
-
-            println!("Installation of Slavonic Slqavjanskqi layout successfully!");
+            println!("Updated Slavonic Slqavjanskqi layout successfully!");
         }
 
         "windows" => {
