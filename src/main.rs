@@ -3,7 +3,7 @@ use std::{env, fs, path};
 use std::path::Path;
 use std::process::Command;
 use os_release::OsRelease;
-use proceed::{proceed, proceed_or, NO, YES};
+use proceed::{proceed, proceed_or, YES};
 
 /*
 ---------------------------
@@ -211,6 +211,11 @@ fn main() {
                     /*
                     uninstallation process xkb START
                     */
+
+                    // missing permissions
+                    // fs::remove_file(&sys_str_ref_xkb_file).expect("failed to remove previous xkb file");
+
+                    // old file remove
                     let command_clean_xkb = format!("sudo rm -i {}", sys_str_ref_xkb_file);
                     let output_command_clean_xkb = Command::new("sh")
                         .arg("-c")
@@ -289,8 +294,16 @@ fn main() {
             print!("Do you want to install missing files now? [Y/n]");
             if proceed_or(YES) {
 
+
+                /*
+                install xkb file START
+                */
+
                 // FIXME: double exists check for same file
-                if !(path_sys_slo_file.exists()) {
+                
+
+                if (path_sys_slo_file.try_exists().is_err()) {
+                    println!("Installation of xkb file ...");
                     // copy local xkb file to system symbols folder
                     let command_install_xkb = format!("sudo cp {} {}", res_str_ref_xkb_file, sys_str_ref_xkb_file);
                     let output_command_instal_xkb = Command::new("sh")
@@ -303,6 +316,20 @@ fn main() {
                         println!("Error: {}", error_xkb_installation);
                     } else {
                         println!("installation of xkb-file successful");
+                    
+                        // TODO: set Permissions to -rw-r--r--
+                        let command_permission_fix_string = format!("sudo chmod 644 sys_str_ref_xkb_file");
+                        let command_permissions_fix = Command::new("sh")
+                        .arg("-c")
+                        .arg(command_permission_fix_string)
+                        .output()
+                        .expect("failed to set permissions on xkb file");
+                        if command_permissions_fix.status.success() == false {
+                            let error_xkb_installation = String::from_utf8_lossy(&command_permissions_fix.stderr);
+                            println!("Error: {}", error_xkb_installation);
+                        } else {
+                            println!("permissions of xkb-file set successful");
+                        }
                     }
                 } else {
                     // file gets not overwritten, skip this step
@@ -311,7 +338,6 @@ fn main() {
                 /*
                 installation process xml START
                 */
-
                 if !(str_base_xml.contains(">slo<")) {
 
                     // install layout-xml into the temporary-working-xml-file
