@@ -1,12 +1,16 @@
 [package]
-name = "xkb_layout"
+name = "slo_xkb_layout"
 version = "4.0.119"
 authors = ["Korcakov, Roman"]
 edition = "2021"
 rust-version = "1.71.0"
 description = "Linux targeted installer of the Slavonic Keyboard Layout Slqavjanskqi for the X Keyboard Extension"
 license = "MIT"
+license-file = "LICENSE"
 publish = false
+repository = "https://github.com/Slqavjanskqi/xkb_layout"
+readme = "README.md"
+keywords = ["slavonic","slavic","xkb","layout","keyboard","international","regional","zonal","constructed","language","auxlang"]
 
 [dependencies]
 os-release = "0.1.0"
