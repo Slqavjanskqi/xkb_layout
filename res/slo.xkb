@@ -1,7 +1,7 @@
 // LINUX XKB LAYOUT FILE
 // SLQVJANSKQI (SLAVONIC LAYOUT)
 // 2018-06-12 © Korcakov, Roman
-// Currect Version: 4.0.116
+// Currect Version: 4.0.117
 
 // The different layers and how to reach them
 // --------------------------------------------------------------
@@ -89,6 +89,11 @@ xkb_symbols "slo_base" {
     key <BKSL> { [      numbersign, apostrophe,                U2212, NoSymbol,                U2020,                U2021, NoSymbol, NoSymbol ] };
 
     // FOURTH ROW
+    // key <LFSH>	{[ Shift_L ]};              // DO NOT USE, else ALT+SHIFT wont change Keyboard-Layout
+    // KEY <LSGT> OF THE 105-KEYS KEYBOARD
+    key.type[Group1] = "EIGHT_LEVEL";
+    key <LSGT> { [            less,    greater,                  bar, NoSymbol,        lessthanequal,     greaterthanequal,    U00BB,    U00AB ] };
+
     key.type[Group1] = "EIGHT_LEVEL_ALPHABETIC";
     key <AB01> { [        NoSymbol,   NoSymbol,             NoSymbol, NoSymbol,             NoSymbol,             NoSymbol, NoSymbol, NoSymbol ] };
     key <AB02> { [        NoSymbol,   NoSymbol,             NoSymbol, NoSymbol,             NoSymbol,             NoSymbol, NoSymbol, NoSymbol ] };
@@ -102,20 +107,14 @@ xkb_symbols "slo_base" {
     key <AB09> { [          period,      colon,       periodcentered,    U0307,             ellipsis,                U2713,    UA673, NoSymbol ] };
     key <AB10> { [           minus, underscore,               hyphen,   endash,                U2022,                U25E6, NoSymbol, NoSymbol ] };
 
-    // FIFTH ROW
-    key.type[Group1] = "EIGHT_LEVEL";
-    key <SPCE> { [           space,      space,         nobreakspace, NoSymbol,                U200A,                U2009, NoSymbol, NoSymbol ] };
-
     key.type[Group1] = "TWO_LEVEL";
     key <RTSH>	{[ Shift_R, Caps_Lock ]};
 
-    // key.type[Group1] = "ONE_LEVEL";
-    // key <LFSH>	{[ Shift_L ]}; // DO NOT USE, else ALT+SHIFT wont change Keyboard-Layout
-    // key <RALT>	{[ ISO_Level3_Shift ]};
-
-    // KEY <LSGT> OF THE 105-KEYS KEYBOARD
+    // FIFTH ROW
     key.type[Group1] = "EIGHT_LEVEL";
-    key <LSGT> { [            less,    greater,                  bar, NoSymbol,        lessthanequal,     greaterthanequal,    U00BB,    U00AB ] };
+    key <SPCE> { [           space,      space,         nobreakspace, NoSymbol,                U200A,                U2009, NoSymbol, NoSymbol ] };
+    // key.type[Group1] = "ONE_LEVEL";
+    // key <RALT>	{[ ISO_Level3_Shift ]};     // DO NOT USE, else ALT+SHIFT wont change Keyboard-Layout
 
     include "kpdl(comma)"
 };
