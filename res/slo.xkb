@@ -1,7 +1,7 @@
 // LINUX XKB LAYOUT FILE
 // SLQVJANSKQI (SLAVONIC LAYOUT)
 // 2018-06-12 © Korcakov, Roman
-// Currect Version: 4.0.117
+// Currect Version: 4.0.118
 
 // The different layers and how to reach them
 // --------------------------------------------------------------
@@ -225,9 +225,9 @@ xkb_symbols "slo_LatnE1" {
     name[Group1]= "Medzhueslqavjanskqi (Latinica E1)";
     // EUROPEAN LAYOUT LATIN
 
-    key <AE11> { [   question, NoSymbol,     backslash, NoSymbol, notequal,     U00AC, NoSymbol, NoSymbol ] }; //
+    key <AE11> { [   question, NoSymbol,     backslash, NoSymbol, notequal,     U00AC,    U00DF,    U1E9E ] }; //
     key <AD11> { [      U1D51,    U02B2,     dead_horn, NoSymbol,    U2198,     U2197, NoSymbol, NoSymbol ] }; //
-    key <AC05> { [          g,        G,         U02B0, NoSymbol,    U02BF,     U261B, NoSymbol, NoSymbol ] }; //
+    key <AC05> { [          g,        G,         U02B0, NoSymbol,    U02BF,     U261B, NoSymbol, NoSymbol ] }; // 
     key <AC10> { [         oe,       OE, dead_belowdot, NoSymbol, NoSymbol,  NoSymbol, NoSymbol, NoSymbol ] }; //
     key <AC11> { [         ae,       AE,   dead_stroke, NoSymbol, NoSymbol,  NoSymbol, NoSymbol, NoSymbol ] }; //
 };
